@@ -1,0 +1,654 @@
+Deleting all documents, utterances, paragraphs and interjections.
+Deletion done.
+Deleting all parties added.
+Deleting all people added.
+Deleting all persons added from protocol parsing.
+reading from /home/leey/Documents/Data/australian_parliament_downloads/downloads_coal/163-5858.xml
+xml with protocol 39/1 from 2000-02-15 00:00:00
+reading from /home/leey/Documents/Data/australian_parliament_downloads/downloads_coal/163-5858.xml
+xml with protocol 39/1 from 2000-02-15 00:00:00
+Person not found in database: John Howard
+name: John Howard
+first name: John, surname: Howard
+Created person: John Howard
+Person not found in database: Jenny Macklin
+name: Jenny Macklin
+first name: Jenny, surname: Macklin
+Created person: Jenny Macklin
+Person not found in database: Michael Wooldridge
+name: Michael Wooldridge
+first name: Michael, surname: Wooldridge
+Created person: Michael Wooldridge
+Person not found in database: Kay Elson
+name: Kay Elson
+first name: Kay, surname: Elson
+Created person: Kay Elson
+Person not found in database: Kim Beazley
+name: Kim Beazley
+first name: Kim, surname: Beazley
+Created person: Kim Beazley
+Person not found in database: Petro Georgiou
+name: Petro Georgiou
+first name: Petro, surname: Georgiou
+Created person: Petro Georgiou
+Person not found in database: Peter Costello
+name: Peter Costello
+first name: Peter, surname: Costello
+Created person: Peter Costello
+Person not found in database: Robert McClelland
+name: Robert McClelland
+first name: Robert, surname: McClelland
+Created person: Robert McClelland
+Person not found in database: Chris Pyne
+name: Chris Pyne
+first name: Chris, surname: Pyne
+Created person: Chris Pyne
+Person not found in database: Jim Lloyd
+name: Jim Lloyd
+first name: Jim, surname: Lloyd
+Created person: Jim Lloyd
+Person not found in database: Peter Reith
+name: Peter Reith
+first name: Peter, surname: Reith
+Created person: Peter Reith
+Person not found in database: Kelvin Thomson
+name: Kelvin Thomson
+first name: Kelvin, surname: Thomson
+Created person: Kelvin Thomson
+Person not found in database: Stuart St Clair
+name: Stuart St Clair
+first name: Stuart, surname: Clair
+Created person: Stuart Clair
+Person not found in database: Simon Crean
+name: Simon Crean
+first name: Simon, surname: Crean
+Created person: Simon Crean
+Person not found in database: De-Anne Kelly
+name: De-Anne Kelly
+first name: De-Anne, surname: Kelly
+Created person: De-Anne Kelly
+Person not found in database: John Anderson
+name: John Anderson
+first name: John, surname: Anderson
+Created person: John Anderson
+Person not found in database: Michael Lee
+name: Michael Lee
+first name: Michael, surname: Lee
+Created person: Michael Lee
+Person not found in database: Alan Cadman
+name: Alan Cadman
+first name: Alan, surname: Cadman
+Created person: Alan Cadman
+Person not found in database: John Fahey
+name: John Fahey
+first name: John, surname: Fahey
+Created person: John Fahey
+Person not found in database: Barry Wakelin
+name: Barry Wakelin
+first name: Barry, surname: Wakelin
+Created person: Barry Wakelin
+Person not found in database: Mark Vaile
+name: Mark Vaile
+first name: Mark, surname: Vaile
+Created person: Mark Vaile
+Person not found in database: Stephen Martin
+name: Stephen Martin
+first name: Stephen, surname: Martin
+Created person: Stephen Martin
+Person not found in database: Margaret May
+name: Margaret May
+first name: Margaret, surname: May
+Created person: Margaret May
+Person not found in database: Nicola Roxon
+name: Nicola Roxon
+first name: Nicola, surname: Roxon
+Created person: Nicola Roxon
+Person not found in database: Bob Charles
+name: Bob Charles
+first name: Bob, surname: Charles
+Created person: Bob Charles
+Person not found in database: David Kemp
+name: David Kemp
+first name: David, surname: Kemp
+Created person: David Kemp
+Person not found in database: Arch Bevis
+name: Arch Bevis
+first name: Arch, surname: Bevis
+Created person: Arch Bevis
+Person not found in database: Lindsay Tanner
+name: Lindsay Tanner
+first name: Lindsay, surname: Tanner
+Created person: Lindsay Tanner
+Person not found in database: Duncan Kerr
+name: Duncan Kerr
+first name: Duncan, surname: Kerr
+Created person: Duncan Kerr
+Person not found in database: Garry Nehl
+name: Garry Nehl
+first name: Garry, surname: Nehl
+Created person: Garry Nehl
+Person not found in database: Julie Bishop
+name: Julie Bishop
+first name: Julie, surname: Bishop
+Created person: Julie Bishop
+Person not found in database: Teresa Gambaro
+name: Teresa Gambaro
+first name: Teresa, surname: Gambaro
+Created person: Teresa Gambaro
+Person not found in database: Daryl Williams
+name: Daryl Williams
+first name: Daryl, surname: Williams
+Created person: Daryl Williams
+Person not found in database: Peter Andren
+name: Peter Andren
+first name: Peter, surname: Andren
+Created person: Peter Andren
+Person not found in database: Peter Slipper
+name: Peter Slipper
+first name: Peter, surname: Slipper
+Created person: Peter Slipper
+Person not found in database: Stephen Smith
+name: Stephen Smith
+first name: Stephen, surname: Smith
+Created person: Stephen Smith
+Person not found in database: Peter Lindsay
+name: Peter Lindsay
+first name: Peter, surname: Lindsay
+Created person: Peter Lindsay
+Person not found in database: Daryl Melham
+name: Daryl Melham
+first name: Daryl, surname: Melham
+Created person: Daryl Melham
+Person not found in database: Kim Wilkie
+name: Kim Wilkie
+first name: Kim, surname: Wilkie
+Created person: Kim Wilkie
+Person not found in database: David Cox
+name: David Cox
+first name: David, surname: Cox
+Created person: David Cox
+Person not found in database: Peter McGauran
+name: Peter McGauran
+first name: Peter, surname: McGauran
+Created person: Peter McGauran
+Person not found in database: Michael Danby
+name: Michael Danby
+first name: Michael, surname: Danby
+Created person: Michael Danby
+Person not found in database: Mal Brough
+name: Mal Brough
+first name: Mal, surname: Brough
+Created person: Mal Brough
+Person not found in database: Jane Gerick
+name: Jane Gerick
+first name: Jane, surname: Gerick
+Created person: Jane Gerick
+Person not found in database: Judi Moylan
+name: Judi Moylan
+first name: Judi, surname: Moylan
+Created person: Judi Moylan
+Person not found in database: Sid Sidebottom
+name: Sid Sidebottom
+first name: Sid, surname: Sidebottom
+Created person: Sid Sidebottom
+Person not found in database: Kerry Bartlett
+name: Kerry Bartlett
+first name: Kerry, surname: Bartlett
+Created person: Kerry Bartlett
+Person not found in database: Leo McLeay
+name: Leo McLeay
+first name: Leo, surname: McLeay
+Created person: Leo McLeay
+Person not found in database: John Murphy
+name: John Murphy
+first name: John, surname: Murphy
+Created person: John Murphy
+Person not found in database: Warren Truss
+name: Warren Truss
+first name: Warren, surname: Truss
+Created person: Warren Truss
+Person not found in database: Kelly Hoare
+name: Kelly Hoare
+first name: Kelly, surname: Hoare
+Created person: Kelly Hoare
+Person not found in database: Frank Mossfield
+name: Frank Mossfield
+first name: Frank, surname: Mossfield
+Created person: Frank Mossfield
+Person not found in database: Julia Irwin
+name: Julia Irwin
+first name: Julia, surname: Irwin
+Created person: Julia Irwin
+Done.
+reading from /home/leey/Documents/Data/australian_parliament_downloads/downloads_coal/163-5858.xml
+xml with protocol 39/1 from 2000-02-15 00:00:00
+reading from /home/leey/Documents/Data/australian_parliament_downloads/downloads_coal/163-5858.xml
+xml with protocol 39/1 from 2000-02-15 00:00:00
+Person not found in database: John Howard
+name: John Howard
+first name: John, surname: Howard
+Created person: John Howard
+Person not found in database: Jenny Macklin
+name: Jenny Macklin
+first name: Jenny, surname: Macklin
+Created person: Jenny Macklin
+Person not found in database: Michael Wooldridge
+name: Michael Wooldridge
+first name: Michael, surname: Wooldridge
+Created person: Michael Wooldridge
+Person not found in database: Kay Elson
+name: Kay Elson
+first name: Kay, surname: Elson
+Created person: Kay Elson
+Person not found in database: Kim Beazley
+name: Kim Beazley
+first name: Kim, surname: Beazley
+Created person: Kim Beazley
+Person not found in database: Petro Georgiou
+name: Petro Georgiou
+first name: Petro, surname: Georgiou
+Created person: Petro Georgiou
+Person not found in database: Peter Costello
+name: Peter Costello
+first name: Peter, surname: Costello
+Created person: Peter Costello
+Person not found in database: Robert McClelland
+name: Robert McClelland
+first name: Robert, surname: McClelland
+Created person: Robert McClelland
+Person not found in database: Chris Pyne
+name: Chris Pyne
+first name: Chris, surname: Pyne
+Created person: Chris Pyne
+Person not found in database: Jim Lloyd
+name: Jim Lloyd
+first name: Jim, surname: Lloyd
+Created person: Jim Lloyd
+Person not found in database: Peter Reith
+name: Peter Reith
+first name: Peter, surname: Reith
+Created person: Peter Reith
+Person not found in database: Kelvin Thomson
+name: Kelvin Thomson
+first name: Kelvin, surname: Thomson
+Created person: Kelvin Thomson
+Person not found in database: Stuart St Clair
+name: Stuart St Clair
+first name: Stuart, surname: Clair
+Created person: Stuart Clair
+Person not found in database: Simon Crean
+name: Simon Crean
+first name: Simon, surname: Crean
+Created person: Simon Crean
+Person not found in database: De-Anne Kelly
+name: De-Anne Kelly
+first name: De-Anne, surname: Kelly
+Created person: De-Anne Kelly
+Person not found in database: John Anderson
+name: John Anderson
+first name: John, surname: Anderson
+Created person: John Anderson
+Person not found in database: Michael Lee
+name: Michael Lee
+first name: Michael, surname: Lee
+Created person: Michael Lee
+Person not found in database: Alan Cadman
+name: Alan Cadman
+first name: Alan, surname: Cadman
+Created person: Alan Cadman
+Person not found in database: John Fahey
+name: John Fahey
+first name: John, surname: Fahey
+Created person: John Fahey
+Person not found in database: Barry Wakelin
+name: Barry Wakelin
+first name: Barry, surname: Wakelin
+Created person: Barry Wakelin
+Person not found in database: Mark Vaile
+name: Mark Vaile
+first name: Mark, surname: Vaile
+Created person: Mark Vaile
+Person not found in database: Stephen Martin
+name: Stephen Martin
+first name: Stephen, surname: Martin
+Created person: Stephen Martin
+Person not found in database: Margaret May
+name: Margaret May
+first name: Margaret, surname: May
+Created person: Margaret May
+Person not found in database: Nicola Roxon
+name: Nicola Roxon
+first name: Nicola, surname: Roxon
+Created person: Nicola Roxon
+Person not found in database: Bob Charles
+name: Bob Charles
+first name: Bob, surname: Charles
+Created person: Bob Charles
+Person not found in database: David Kemp
+name: David Kemp
+first name: David, surname: Kemp
+Created person: David Kemp
+Person not found in database: Arch Bevis
+name: Arch Bevis
+first name: Arch, surname: Bevis
+Created person: Arch Bevis
+Person not found in database: Lindsay Tanner
+name: Lindsay Tanner
+first name: Lindsay, surname: Tanner
+Created person: Lindsay Tanner
+Person not found in database: Duncan Kerr
+name: Duncan Kerr
+first name: Duncan, surname: Kerr
+Created person: Duncan Kerr
+Person not found in database: Garry Nehl
+name: Garry Nehl
+first name: Garry, surname: Nehl
+Created person: Garry Nehl
+Person not found in database: Julie Bishop
+name: Julie Bishop
+first name: Julie, surname: Bishop
+Created person: Julie Bishop
+Person not found in database: Teresa Gambaro
+name: Teresa Gambaro
+first name: Teresa, surname: Gambaro
+Created person: Teresa Gambaro
+Person not found in database: Daryl Williams
+name: Daryl Williams
+first name: Daryl, surname: Williams
+Created person: Daryl Williams
+Person not found in database: Peter Andren
+name: Peter Andren
+first name: Peter, surname: Andren
+Created person: Peter Andren
+Person not found in database: Peter Slipper
+name: Peter Slipper
+first name: Peter, surname: Slipper
+Created person: Peter Slipper
+Person not found in database: Stephen Smith
+name: Stephen Smith
+first name: Stephen, surname: Smith
+Created person: Stephen Smith
+Person not found in database: Peter Lindsay
+name: Peter Lindsay
+first name: Peter, surname: Lindsay
+Created person: Peter Lindsay
+Person not found in database: Daryl Melham
+name: Daryl Melham
+first name: Daryl, surname: Melham
+Created person: Daryl Melham
+Person not found in database: Kim Wilkie
+name: Kim Wilkie
+first name: Kim, surname: Wilkie
+Created person: Kim Wilkie
+Person not found in database: David Cox
+name: David Cox
+first name: David, surname: Cox
+Created person: David Cox
+Person not found in database: Peter McGauran
+name: Peter McGauran
+first name: Peter, surname: McGauran
+Created person: Peter McGauran
+Person not found in database: Michael Danby
+name: Michael Danby
+first name: Michael, surname: Danby
+Created person: Michael Danby
+Person not found in database: Mal Brough
+name: Mal Brough
+first name: Mal, surname: Brough
+Created person: Mal Brough
+Person not found in database: Jane Gerick
+name: Jane Gerick
+first name: Jane, surname: Gerick
+Created person: Jane Gerick
+Person not found in database: Judi Moylan
+name: Judi Moylan
+first name: Judi, surname: Moylan
+Created person: Judi Moylan
+Person not found in database: Sid Sidebottom
+name: Sid Sidebottom
+first name: Sid, surname: Sidebottom
+Created person: Sid Sidebottom
+Person not found in database: Kerry Bartlett
+name: Kerry Bartlett
+first name: Kerry, surname: Bartlett
+Created person: Kerry Bartlett
+Person not found in database: Leo McLeay
+name: Leo McLeay
+first name: Leo, surname: McLeay
+Created person: Leo McLeay
+Person not found in database: John Murphy
+name: John Murphy
+first name: John, surname: Murphy
+Created person: John Murphy
+Person not found in database: Warren Truss
+name: Warren Truss
+first name: Warren, surname: Truss
+Created person: Warren Truss
+Person not found in database: Kelly Hoare
+name: Kelly Hoare
+first name: Kelly, surname: Hoare
+Created person: Kelly Hoare
+Person not found in database: Frank Mossfield
+name: Frank Mossfield
+first name: Frank, surname: Mossfield
+Created person: Frank Mossfield
+Person not found in database: Julia Irwin
+name: Julia Irwin
+first name: Julia, surname: Irwin
+Created person: Julia Irwin
+Done.
+reading from /home/leey/Documents/Data/australian_parliament_downloads/downloads_coal/163-5858.xml
+xml with protocol 39/1 from 2000-02-15 00:00:00
+Person not found in database: John Howard
+name: John Howard
+first name: John, surname: Howard
+Created person: John Howard
+Person not found in database: Jenny Macklin
+name: Jenny Macklin
+first name: Jenny, surname: Macklin
+Created person: Jenny Macklin
+Person not found in database: Michael Wooldridge
+name: Michael Wooldridge
+first name: Michael, surname: Wooldridge
+Created person: Michael Wooldridge
+Person not found in database: Kay Elson
+name: Kay Elson
+first name: Kay, surname: Elson
+Created person: Kay Elson
+Person not found in database: Kim Beazley
+name: Kim Beazley
+first name: Kim, surname: Beazley
+Created person: Kim Beazley
+Person not found in database: Petro Georgiou
+name: Petro Georgiou
+first name: Petro, surname: Georgiou
+Created person: Petro Georgiou
+Person not found in database: Peter Costello
+name: Peter Costello
+first name: Peter, surname: Costello
+Created person: Peter Costello
+Person not found in database: Robert McClelland
+name: Robert McClelland
+first name: Robert, surname: McClelland
+Created person: Robert McClelland
+Person not found in database: Chris Pyne
+name: Chris Pyne
+first name: Chris, surname: Pyne
+Created person: Chris Pyne
+Person not found in database: Jim Lloyd
+name: Jim Lloyd
+first name: Jim, surname: Lloyd
+Created person: Jim Lloyd
+Person not found in database: Peter Reith
+name: Peter Reith
+first name: Peter, surname: Reith
+Created person: Peter Reith
+Person not found in database: Kelvin Thomson
+name: Kelvin Thomson
+first name: Kelvin, surname: Thomson
+Created person: Kelvin Thomson
+Person not found in database: Stuart St Clair
+name: Stuart St Clair
+first name: Stuart, surname: Clair
+Created person: Stuart Clair
+Person not found in database: Simon Crean
+name: Simon Crean
+first name: Simon, surname: Crean
+Created person: Simon Crean
+Person not found in database: De-Anne Kelly
+name: De-Anne Kelly
+first name: De-Anne, surname: Kelly
+Created person: De-Anne Kelly
+Person not found in database: John Anderson
+name: John Anderson
+first name: John, surname: Anderson
+Created person: John Anderson
+Person not found in database: Michael Lee
+name: Michael Lee
+first name: Michael, surname: Lee
+Created person: Michael Lee
+Person not found in database: Alan Cadman
+name: Alan Cadman
+first name: Alan, surname: Cadman
+Created person: Alan Cadman
+Person not found in database: John Fahey
+name: John Fahey
+first name: John, surname: Fahey
+Created person: John Fahey
+Person not found in database: Barry Wakelin
+name: Barry Wakelin
+first name: Barry, surname: Wakelin
+Created person: Barry Wakelin
+Person not found in database: Mark Vaile
+name: Mark Vaile
+first name: Mark, surname: Vaile
+Created person: Mark Vaile
+Person not found in database: Stephen Martin
+name: Stephen Martin
+first name: Stephen, surname: Martin
+Created person: Stephen Martin
+Person not found in database: Margaret May
+name: Margaret May
+first name: Margaret, surname: May
+Created person: Margaret May
+Person not found in database: Nicola Roxon
+name: Nicola Roxon
+first name: Nicola, surname: Roxon
+Created person: Nicola Roxon
+Person not found in database: Bob Charles
+name: Bob Charles
+first name: Bob, surname: Charles
+Created person: Bob Charles
+Person not found in database: David Kemp
+name: David Kemp
+first name: David, surname: Kemp
+Created person: David Kemp
+Person not found in database: Arch Bevis
+name: Arch Bevis
+first name: Arch, surname: Bevis
+Created person: Arch Bevis
+Person not found in database: Lindsay Tanner
+name: Lindsay Tanner
+first name: Lindsay, surname: Tanner
+Created person: Lindsay Tanner
+Person not found in database: Duncan Kerr
+name: Duncan Kerr
+first name: Duncan, surname: Kerr
+Created person: Duncan Kerr
+Person not found in database: Garry Nehl
+name: Garry Nehl
+first name: Garry, surname: Nehl
+Created person: Garry Nehl
+Person not found in database: Julie Bishop
+name: Julie Bishop
+first name: Julie, surname: Bishop
+Created person: Julie Bishop
+Person not found in database: Teresa Gambaro
+name: Teresa Gambaro
+first name: Teresa, surname: Gambaro
+Created person: Teresa Gambaro
+Person not found in database: Daryl Williams
+name: Daryl Williams
+first name: Daryl, surname: Williams
+Created person: Daryl Williams
+Person not found in database: Peter Andren
+name: Peter Andren
+first name: Peter, surname: Andren
+Created person: Peter Andren
+Person not found in database: Peter Slipper
+name: Peter Slipper
+first name: Peter, surname: Slipper
+Created person: Peter Slipper
+Person not found in database: Stephen Smith
+name: Stephen Smith
+first name: Stephen, surname: Smith
+Created person: Stephen Smith
+Person not found in database: Peter Lindsay
+name: Peter Lindsay
+first name: Peter, surname: Lindsay
+Created person: Peter Lindsay
+Person not found in database: Daryl Melham
+name: Daryl Melham
+first name: Daryl, surname: Melham
+Created person: Daryl Melham
+Person not found in database: Kim Wilkie
+name: Kim Wilkie
+first name: Kim, surname: Wilkie
+Created person: Kim Wilkie
+Person not found in database: David Cox
+name: David Cox
+first name: David, surname: Cox
+Created person: David Cox
+Person not found in database: Peter McGauran
+name: Peter McGauran
+first name: Peter, surname: McGauran
+Created person: Peter McGauran
+Person not found in database: Michael Danby
+name: Michael Danby
+first name: Michael, surname: Danby
+Created person: Michael Danby
+Person not found in database: Mal Brough
+name: Mal Brough
+first name: Mal, surname: Brough
+Created person: Mal Brough
+Person not found in database: Jane Gerick
+name: Jane Gerick
+first name: Jane, surname: Gerick
+Created person: Jane Gerick
+Person not found in database: Judi Moylan
+name: Judi Moylan
+first name: Judi, surname: Moylan
+Created person: Judi Moylan
+Person not found in database: Sid Sidebottom
+name: Sid Sidebottom
+first name: Sid, surname: Sidebottom
+Created person: Sid Sidebottom
+Person not found in database: Kerry Bartlett
+name: Kerry Bartlett
+first name: Kerry, surname: Bartlett
+Created person: Kerry Bartlett
+Person not found in database: Leo McLeay
+name: Leo McLeay
+first name: Leo, surname: McLeay
+Created person: Leo McLeay
+Person not found in database: John Murphy
+name: John Murphy
+first name: John, surname: Murphy
+Created person: John Murphy
+Person not found in database: Warren Truss
+name: Warren Truss
+first name: Warren, surname: Truss
+Created person: Warren Truss
+Person not found in database: Kelly Hoare
+name: Kelly Hoare
+first name: Kelly, surname: Hoare
+Created person: Kelly Hoare
+Person not found in database: Frank Mossfield
+name: Frank Mossfield
+first name: Frank, surname: Mossfield
+Created person: Frank Mossfield
+Person not found in database: Julia Irwin
+name: Julia Irwin
+first name: Julia, surname: Irwin
+Created person: Julia Irwin
+Done.

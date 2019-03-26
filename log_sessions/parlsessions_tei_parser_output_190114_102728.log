@@ -1,0 +1,1302 @@
+reading from /home/leey/Documents/Data/australian_parliament_downloads/downloads_coal/3646-3.xml
+reading from /home/leey/Documents/Data/australian_parliament_downloads/downloads_coal/3646-3.xml
+reading from /home/leey/Documents/Data/australian_parliament_downloads/downloads_coal/3646-3.xml
+xml with protocol 41/1 from 2004-12-07 00:00:00
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+Person not found in database: Mark Baker
+name: Mark Baker
+first name: Mark, surname: Baker
+Created person: Mark Baker
+Person not found in database: Bruce Scott
+name: Bruce Scott
+first name: Bruce, surname: Scott
+Created person: Bruce Scott
+Person not found in database: Brendan Nelson
+name: Brendan Nelson
+first name: Brendan, surname: Nelson
+Created person: Brendan Nelson
+Person not found in database: Michael Keenan
+name: Michael Keenan
+first name: Michael, surname: Keenan
+Created person: Michael Keenan
+Person not found in database: Kevin Andrews
+name: Kevin Andrews
+first name: Kevin, surname: Andrews
+Created person: Kevin Andrews
+Person not found in database: Kirsten Livermore
+name: Kirsten Livermore
+first name: Kirsten, surname: Livermore
+Created person: Kirsten Livermore
+Person not found in database: David Fawcett
+name: David Fawcett
+first name: David, surname: Fawcett
+Created person: David Fawcett
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+Person not found in database: Ian Causley
+name: Ian Causley
+first name: Ian, surname: Causley
+Created person: Ian Causley
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!reading from /home/leey/Documents/Data/australian_parliament_downloads/downloads_coal/3646-3.xml
+reading from /home/leey/Documents/Data/australian_parliament_downloads/downloads_coal/3646-3.xml
+xml with protocol 41/1 from 2004-12-07 00:00:00
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+Person not found in database: Mark Baker
+name: Mark Baker
+first name: Mark, surname: Baker
+Created person: Mark Baker
+Person not found in database: Bruce Scott
+name: Bruce Scott
+first name: Bruce, surname: Scott
+Created person: Bruce Scott
+Person not found in database: Brendan Nelson
+name: Brendan Nelson
+first name: Brendan, surname: Nelson
+Created person: Brendan Nelson
+Person not found in database: Michael Keenan
+name: Michael Keenan
+first name: Michael, surname: Keenan
+Created person: Michael Keenan
+Person not found in database: Kevin Andrews
+name: Kevin Andrews
+first name: Kevin, surname: Andrews
+Created person: Kevin Andrews
+Person not found in database: Kirsten Livermore
+name: Kirsten Livermore
+first name: Kirsten, surname: Livermore
+Created person: Kirsten Livermore
+Person not found in database: David Fawcett
+name: David Fawcett
+first name: David, surname: Fawcett
+Created person: David Fawcett
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+Person not found in database: Ian Causley
+name: Ian Causley
+first name: Ian, surname: Causley
+Created person: Ian Causley
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>reading from /home/leey/Documents/Data/australian_parliament_downloads/downloads_coal/3646-3.xml
+xml with protocol 41/1 from 2004-12-07 00:00:00
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+Person not found in database: Mark Baker
+name: Mark Baker
+first name: Mark, surname: Baker
+Created person: Mark Baker
+Person not found in database: Bruce Scott
+name: Bruce Scott
+first name: Bruce, surname: Scott
+Created person: Bruce Scott
+Person not found in database: Brendan Nelson
+name: Brendan Nelson
+first name: Brendan, surname: Nelson
+Created person: Brendan Nelson
+Person not found in database: Michael Keenan
+name: Michael Keenan
+first name: Michael, surname: Keenan
+Created person: Michael Keenan
+Person not found in database: Kevin Andrews
+name: Kevin Andrews
+first name: Kevin, surname: Andrews
+Created person: Kevin Andrews
+Person not found in database: Kirsten Livermore
+name: Kirsten Livermore
+first name: Kirsten, surname: Livermore
+Created person: Kirsten Livermore
+Person not found in database: David Fawcett
+name: David Fawcett
+first name: David, surname: Fawcett
+Created person: David Fawcett
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+Person not found in database: Ian Causley
+name: Ian Causley
+first name: Ian, surname: Causley
+Created person: Ian Causley
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+Person not found in database: Bernie Ripoll
+name: Bernie Ripoll
+first name: Bernie, surname: Ripoll
+Created person: Bernie Ripoll
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+Person not found in database: Gregory Hunt
+name: Gregory Hunt
+first name: Gregory, surname: Hunt
+Created person: Gregory Hunt
+! Warning: Could not distinguish between persons!
+For name string: Ian Causley
+first name: Ian, surname: Causley
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+Person not found in database: Kate Ellis
+name: Kate Ellis
+first name: Kate, surname: Ellis
+Created person: Kate Ellis
+! Warning: Could not distinguish between persons!
+For name string: Ian Causley
+first name: Ian, surname: Causley
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+Person not found in database: Russell Broadbent
+name: Russell Broadbent
+first name: Russell, surname: Broadbent
+Created person: Russell Broadbent
+! Warning: Could not distinguish between persons!
+For name string: Harry Jenkins
+first name: Harry, surname: Jenkins
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: Harry Jenkins
+first name: Harry, surname: Jenkins
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: Alex Somlyay
+first name: Alex, surname: Somlyay
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+Person not found in database: Tony Burke
+name: Tony Burke
+first name: Tony, surname: Burke
+Created person: Tony Burke
+Person not found in database: Luke Hartsuyker
+name: Luke Hartsuyker
+first name: Luke, surname: Hartsuyker
+Created person: Luke Hartsuyker
+Person not found in database: Christopher Pearce
+name: Christopher Pearce
+first name: Christopher, surname: Pearce
+Created person: Christopher Pearce
+Person not found in database: Antony Windsor
+name: Antony Windsor
+first name: Antony, surname: Windsor
+Created person: Antony Windsor
+! Warning: Could not distinguish between persons!
+For name string: Michael Hatton
+first name: Michael, surname: Hatton
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: Michael Hatton
+first name: Michael, surname: Hatton
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+Person not found in database: Jill Hall
+name: Jill Hall
+first name: Jill, surname: Hall
+Created person: Jill Hall
+! Warning: Could not distinguish between persons!
+For name string: Michael Hatton
+first name: Michael, surname: Hatton
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: Peter Lindsay
+first name: Peter, surname: Lindsay
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+Person not found in database: Annette Ellis
+name: Annette Ellis
+first name: Annette, surname: Ellis
+Created person: Annette Ellis
+Person not found in database: Michael Hatton
+name: Michael Hatton
+first name: Michael, surname: Hatton
+Created person: Michael Hatton
+! Warning: Could not distinguish between persons!
+For name string: Peter Lindsay
+first name: Peter, surname: Lindsay
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The DEPUTY SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: Kim Beazley
+first name: Kim, surname: Beazley
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: Kim Beazley
+first name: Kim, surname: Beazley
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: Kim Beazley
+first name: Kim, surname: Beazley
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+Person not found in database: Julie Owens
+name: Julie Owens
+first name: Julie, surname: Owens
+Created person: Julie Owens
+! Warning: Could not distinguish between persons!
+For name string: Kim Wilkie
+first name: Kim, surname: Wilkie
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The DEPUTY SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The DEPUTY SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: Daryl Melham
+first name: Daryl, surname: Melham
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: Kim Wilkie
+first name: Kim, surname: Wilkie
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The DEPUTY SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+Person not found in database: Martin Ferguson
+name: Martin Ferguson
+first name: Martin, surname: Ferguson
+Created person: Martin Ferguson
+! Warning: Could not distinguish between persons!
+For name string: Kim Wilkie
+first name: Kim, surname: Wilkie
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+Person not found in database: Bernie Ripoll
+name: Bernie Ripoll
+first name: Bernie, surname: Ripoll
+Created person: Bernie Ripoll
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+Person not found in database: Gregory Hunt
+name: Gregory Hunt
+first name: Gregory, surname: Hunt
+Created person: Gregory Hunt
+! Warning: Could not distinguish between persons!
+For name string: Ian Causley
+first name: Ian, surname: Causley
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+Person not found in database: Kate Ellis
+name: Kate Ellis
+first name: Kate, surname: Ellis
+Created person: Kate Ellis
+! Warning: Could not distinguish between persons!
+For name string: Ian Causley
+first name: Ian, surname: Causley
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+Person not found in database: Russell Broadbent
+name: Russell Broadbent
+first name: Russell, surname: Broadbent
+Created person: Russell Broadbent
+! Warning: Could not distinguish between persons!
+For name string: Harry Jenkins
+first name: Harry, surname: Jenkins
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: Harry Jenkins
+first name: Harry, surname: Jenkins
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: Alex Somlyay
+first name: Alex, surname: Somlyay
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+Person not found in database: Tony Burke
+name: Tony Burke
+first name: Tony, surname: Burke
+Created person: Tony Burke
+Person not found in database: Luke Hartsuyker
+name: Luke Hartsuyker
+first name: Luke, surname: Hartsuyker
+Created person: Luke Hartsuyker
+Person not found in database: Christopher Pearce
+name: Christopher Pearce
+first name: Christopher, surname: Pearce
+Created person: Christopher Pearce
+Person not found in database: Antony Windsor
+name: Antony Windsor
+first name: Antony, surname: Windsor
+Created person: Antony Windsor
+! Warning: Could not distinguish between persons!
+For name string: Michael Hatton
+first name: Michael, surname: Hatton
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: Michael Hatton
+first name: Michael, surname: Hatton
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+Person not found in database: Jill Hall
+name: Jill Hall
+first name: Jill, surname: Hall
+Created person: Jill Hall
+! Warning: Could not distinguish between persons!
+For name string: Michael Hatton
+first name: Michael, surname: Hatton
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: Peter Lindsay
+first name: Peter, surname: Lindsay
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+Person not found in database: Annette Ellis
+name: Annette Ellis
+first name: Annette, surname: Ellis
+Created person: Annette Ellis
+Person not found in database: Michael Hatton
+name: Michael Hatton
+first name: Michael, surname: Hatton
+Created person: Michael Hatton
+! Warning: Could not distinguish between persons!
+For name string: Peter Lindsay
+first name: Peter, surname: Lindsay
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The DEPUTY SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: Kim Beazley
+first name: Kim, surname: Beazley
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: Kim Beazley
+first name: Kim, surname: Beazley
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: Kim Beazley
+first name: Kim, surname: Beazley
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+Person not found in database: Julie Owens
+name: Julie Owens
+first name: Julie, surname: Owens
+Created person: Julie Owens
+! Warning: Could not distinguish between persons!
+For name string: Kim Wilkie
+first name: Kim, surname: Wilkie
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The DEPUTY SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The DEPUTY SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: Daryl Melham
+first name: Daryl, surname: Melham
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: Kim Wilkie
+first name: Kim, surname: Wilkie
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The DEPUTY SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+Person not found in database: Martin Ferguson
+name: Martin Ferguson
+first name: Martin, surname: Ferguson
+Created person: Martin Ferguson
+! Warning: Could not distinguish between persons!
+For name string: Kim Wilkie
+first name: Kim, surname: Wilkie
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+Person not found in database: Bernie Ripoll
+name: Bernie Ripoll
+first name: Bernie, surname: Ripoll
+Created person: Bernie Ripoll
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+Person not found in database: Gregory Hunt
+name: Gregory Hunt
+first name: Gregory, surname: Hunt
+Created person: Gregory Hunt
+! Warning: Could not distinguish between persons!
+For name string: Ian Causley
+first name: Ian, surname: Causley
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+Person not found in database: Kate Ellis
+name: Kate Ellis
+first name: Kate, surname: Ellis
+Created person: Kate Ellis
+! Warning: Could not distinguish between persons!
+For name string: Ian Causley
+first name: Ian, surname: Causley
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+Person not found in database: Russell Broadbent
+name: Russell Broadbent
+first name: Russell, surname: Broadbent
+Created person: Russell Broadbent
+! Warning: Could not distinguish between persons!
+For name string: Harry Jenkins
+first name: Harry, surname: Jenkins
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: Harry Jenkins
+first name: Harry, surname: Jenkins
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: Alex Somlyay
+first name: Alex, surname: Somlyay
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+Person not found in database: Tony Burke
+name: Tony Burke
+first name: Tony, surname: Burke
+Created person: Tony Burke
+Person not found in database: Luke Hartsuyker
+name: Luke Hartsuyker
+first name: Luke, surname: Hartsuyker
+Created person: Luke Hartsuyker
+Person not found in database: Christopher Pearce
+name: Christopher Pearce
+first name: Christopher, surname: Pearce
+Created person: Christopher Pearce
+Person not found in database: Antony Windsor
+name: Antony Windsor
+first name: Antony, surname: Windsor
+Created person: Antony Windsor
+! Warning: Could not distinguish between persons!
+For name string: Michael Hatton
+first name: Michael, surname: Hatton
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: Michael Hatton
+first name: Michael, surname: Hatton
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+Person not found in database: Jill Hall
+name: Jill Hall
+first name: Jill, surname: Hall
+Created person: Jill Hall
+! Warning: Could not distinguish between persons!
+For name string: Michael Hatton
+first name: Michael, surname: Hatton
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: Peter Lindsay
+first name: Peter, surname: Lindsay
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+Person not found in database: Annette Ellis
+name: Annette Ellis
+first name: Annette, surname: Ellis
+Created person: Annette Ellis
+Person not found in database: Michael Hatton
+name: Michael Hatton
+first name: Michael, surname: Hatton
+Created person: Michael Hatton
+! Warning: Could not distinguish between persons!
+For name string: Peter Lindsay
+first name: Peter, surname: Lindsay
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The DEPUTY SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: Kim Beazley
+first name: Kim, surname: Beazley
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: Kim Beazley
+first name: Kim, surname: Beazley
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: Kim Beazley
+first name: Kim, surname: Beazley
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+Person not found in database: Julie Owens
+name: Julie Owens
+first name: Julie, surname: Owens
+Created person: Julie Owens
+! Warning: Could not distinguish between persons!
+For name string: Kim Wilkie
+first name: Kim, surname: Wilkie
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The DEPUTY SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The DEPUTY SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: Daryl Melham
+first name: Daryl, surname: Melham
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: Kim Wilkie
+first name: Kim, surname: Wilkie
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The DEPUTY SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+Person not found in database: Martin Ferguson
+name: Martin Ferguson
+first name: Martin, surname: Ferguson
+Created person: Martin Ferguson
+! Warning: Could not distinguish between persons!
+For name string: Kim Wilkie
+first name: Kim, surname: Wilkie
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The DEPUTY SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+! Warning: Could not distinguish between persons!
+For name string: The DEPUTY SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+Person not found in database: Philip Ruddock
+name: Philip Ruddock
+first name: Philip, surname: Ruddock
+Created person: Philip Ruddock
+Person not found in database: Alan Griffin
+name: Alan Griffin
+first name: Alan, surname: Griffin
+Created person: Alan Griffin
+Person not found in database: Michael Ferguson
+name: Michael Ferguson
+first name: Michael, surname: Ferguson
+Created person: Michael Ferguson
+Person not found in database: Alby Schultz
+name: Alby Schultz
+first name: Alby, surname: Schultz
+Created person: Alby Schultz
+Person not found in database: Chris Bowen
+name: Chris Bowen
+first name: Chris, surname: Bowen
+Created person: Chris Bowen
+Person not found in database: Sophie Panopoulos
+name: Sophie Panopoulos
+first name: Sophie, surname: Panopoulos
+Created person: Sophie Panopoulos
+Person not found in database: Sharon Bird
+name: Sharon Bird
+first name: Sharon, surname: Bird
+Created person: Sharon Bird
+Person not found in database: Dennis Jensen
+name: Dennis Jensen
+first name: Dennis, surname: Jensen
+Created person: Dennis Jensen
+Person not found in database: Sussan Ley
+name: Sussan Ley
+first name: Sussan, surname: Ley
+Created person: Sussan Ley
+Done.
+
+For name string: The DEPUTY SPEAKER
+first name: The, surname: SPEAKER
+Query: <QuerySet [<Person: SPEAKER>, <Person: Frederick Holder>]>
+Taking first entry of ambiguous results
+Person not found in database: Philip Ruddock
+name: Philip Ruddock
+first name: Philip, surname: Ruddock
+Created person: Philip Ruddock
+Person not found in database: Alan Griffin
+name: Alan Griffin
+first name: Alan, surname: Griffin
+Created person: Alan Griffin
+Person not found in database: Michael Ferguson
+name: Michael Ferguson
+first name: Michael, surname: Ferguson
+Created person: Michael Ferguson
+Person not found in database: Alby Schultz
+name: Alby Schultz
+first name: Alby, surname: Schultz
+Created person: Alby Schultz
+Person not found in database: Chris Bowen
+name: Chris Bowen
+first name: Chris, surname: Bowen
+Created person: Chris Bowen
+Person not found in database: Sophie Panopoulos
+name: Sophie Panopoulos
+first name: Sophie, surname: Panopoulos
+Created person: Sophie Panopoulos
+Person not found in database: Sharon Bird
+name: Sharon Bird
+first name: Sharon, surname: Bird
+Created person: Sharon Bird
+Person not found in database: Dennis Jensen
+name: Dennis Jensen
+first name: Dennis, surname: Jensen
+Created person: Dennis Jensen
+Person not found in database: Sussan Ley
+name: Sussan Ley
+first name: Sussan, surname: Ley
+Created person: Sussan Ley
+Done.
+
+Taking first entry of ambiguous results
+Person not found in database: Philip Ruddock
+name: Philip Ruddock
+first name: Philip, surname: Ruddock
+Created person: Philip Ruddock
+Person not found in database: Alan Griffin
+name: Alan Griffin
+first name: Alan, surname: Griffin
+Created person: Alan Griffin
+Person not found in database: Michael Ferguson
+name: Michael Ferguson
+first name: Michael, surname: Ferguson
+Created person: Michael Ferguson
+Person not found in database: Alby Schultz
+name: Alby Schultz
+first name: Alby, surname: Schultz
+Created person: Alby Schultz
+Person not found in database: Chris Bowen
+name: Chris Bowen
+first name: Chris, surname: Bowen
+Created person: Chris Bowen
+Person not found in database: Sophie Panopoulos
+name: Sophie Panopoulos
+first name: Sophie, surname: Panopoulos
+Created person: Sophie Panopoulos
+Person not found in database: Sharon Bird
+name: Sharon Bird
+first name: Sharon, surname: Bird
+Created person: Sharon Bird
+Person not found in database: Dennis Jensen
+name: Dennis Jensen
+first name: Dennis, surname: Jensen
+Created person: Dennis Jensen
+Person not found in database: Sussan Ley
+name: Sussan Ley
+first name: Sussan, surname: Ley
+Created person: Sussan Ley
+Done.
