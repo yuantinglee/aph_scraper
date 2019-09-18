@@ -1,4 +1,4 @@
-log_sessions
-xml_files
+log_sessions/
+xml_files/
 .ipynb_checkpoints
 
