@@ -51,43 +51,65 @@ POL_FNAME = data_dir + 'all.csv'
 
 
 PARTY_NAMES = [
-    {'name':'cducsu','alt_names':['CDU','CSU','CDU/CSU', 'Fraktion der Christlich Demokratischen Union/Christlich - Sozialen Union',
-                                  'Fraktion der CDU/CSU (Gast)', 'CSUS', 'DSU']},
-                                # all mdbs of dsu were guests with CDU
-    {'name': 'linke', 'alt_names': ['linke', 'DIE LINKE','Gruppe der Partei des Demokratischen Sozialismus/Linke Liste','DIE LINKE.',
-                                    'Fraktion DIE LINKE.', 'PDS/LL']},
-    {'name': 'fdp', 'alt_names': ['fdp','FDP', 'Fraktion der Freien Demokratischen Partei',
-                                  'Fraktion der FDP (Gast)', 'DPS']},
-                                # DPS: Demokratische Partei Saar: Landesverband Saarland der FDP
-    {'name': 'spd', 'alt_names': ['spd','SPD', 'Fraktion der Sozialdemokratischen Partei Deutschlands',
-                                  'Fraktion der SPD (Gast)']},
-    {'name':'gruene', 'alt_names': ['gruene', 'Gruene', 'GRÜNE', 'Fraktion Die Grünen', 'BÜNDNIS 90/DIE GRÜNEN',
-                                    'Fraktion Bündnis 90/Die Grünen', 'Gruppe Bündnis 90/Die Grünen',
-                                    'Fraktion Die Grünen/Bündnis 90', 'DIE GRÜNEN/BÜNDNIS 90']},
-    {'name':'afd', 'alt_names': ['afd', 'AfD', 'Alternative für Deutschland', 'Blaue']},
-    {'name': 'kpd', 'alt_names': ['kpd', 'KPD', 'Fraktion der Kommunistischen Partei Deutschlands']},
-    {'name': 'bp', 'alt_names': ['bp', 'BP', 'Fraktion Bayernpartei', 'Fraktion Deutsche Partei Bayern',
-                                 'Fraktion Deutsche Partei/Deutsche Partei Bayern']},
-    {'name': 'dp', 'alt_names': ['dp', 'DP', 'Fraktion Deutsche Partei', 'Fraktion Deutsche Partei/Freie Volkspartei',
-                                 'Fraktion Freie Volkspartei', 'DPB', 'Fraktion DP/DPB (Gast)',
-                                 'Fraktion Demokratische Arbeitsgemeinschaft']},
-                                # Freie Volkpartei merged with DP in 1957 after splitting from FDP in 1956
-    {'name': 'pds', 'alt_names': ['pds', 'PDS', 'Gruppe der Partei des Demokratischen Sozialismus',
-                                  'Fraktion der Partei des Demokratischen Sozialismus']},
-    {'name': 'gb/bhe', 'alt_names': ['gb/bhe', 'GB/BHE', 'GB/ BHE',
-                                     'Fraktion Gesamtdeutscher Block / Block der Heimatvertriebenen und Entrechteten',
-                                     'Fraktion Deutscher Gemeinschaftsblock der Heimatvertriebenen und Entrechteten']},
-    {'name': 'dzp', 'alt_names': ['dzp', 'DZP', 'Fraktion Deutsche Zentrums-Partei', 'FU',
-                                  'Fraktion Föderalistische Union']},
-    # Fraktion Förderalistische Union (FU) was not a party but a faction of DZP and BP
-    {'name': 'drp', 'alt_names': ['drp', 'DRP', 'Fraktion Deutsche Reichspartei/Nationale Rechte',
-                                  'Fraktion Deutsche Reichspartei', 'Fraktion DRP (Gast)']},
-    {'name': 'wav', 'alt_names': ['WAV', 'Fraktion Wirtschaftliche Aufbauvereinigung', 'Fraktion WAV (Gast)']},
-    {'name': 'other', 'alt_names': ['SRP', 'CVP', 'Gruppe Kraft/Oberländer', 'Gruppe Deutsche Partei']},
-    # {'name':'', 'alt_names': []},
-    {'name': 'parteilos', 'alt_names': ['parteilos', 'Parteilos']},
-    {'name': 'fraktionslos', 'alt_names': ['fraktionslos', 'Fraktionslos']}
-
+    {'name':'CP','alt_names':['Australian Country Party']},
+    {'name': 'LIB', 'alt_names': ['Liberal Party of Australia']},
+    {'name': 'NAT', 'alt_names': ['Nationalist Party']},
+    {'name': 'ALP', 'alt_names': ['Australian Labor Party']},
+    {'name': 'NCP', 'alt_names': ['National Country Party']},
+    {'name': 'NPA', 'alt_names': ['National Party of Australia']}
+    {'name': 'AD', 'alt_names': ['Australian Democrats']},
+    {'name': 'ALP (N-C)', 'alt_names': ['Australian Labor Party (Non-Communist)']},
+    {'name': 'NP', 'alt_names': ['The Nationals']},
+    {'name': 'IND', 'alt_names': ['Independent']},
+    {'name': 'ALP (A-C)', 'alt_names': ['Australian Labor Party (Anti-Communist)']},
+    {'name': 'KAP', 'alt_names': ['Katters Australian Party']},
+    {'name': 'PHON', 'alt_names': ['Pauline Hansons One Nation']},
+    {'name': 'FLP', 'alt_names': ['Federal Labor Party']},
+    {'name': 'ANTI-SOC', 'alt_names': ['Anti-Socialist Party']},
+    {'name': 'UAP', 'alt_names': ['United Australia Party']},
+    {'name': 'FT', 'alt_names': ['Free Trade']},
+    {'name': 'GRN', 'alt_names': ['Australian Greens']},
+    {'name': 'PROT', 'alt_names': ['Protectionist Party']},
+    {'name': 'LANG LAB', 'alt_names': ['Lang Labor Party']},
+    {'name': 'IND LAB', 'alt_names': ['Independent Labor']},
+    {'name': 'CDP', 'alt_names': ['Christian Democratic Party']},
+    {'name': 'DLP', 'alt_names': ['Democratic Labor Party']},
+    {'name': 'QLP', 'alt_names': ['Queensland Labor Party']},
+    {'name': 'LCL', 'alt_names': ['Liberal Country League']},
+    {'name': 'GWA', 'alt_names': ['The Greens (WA) Inc']},
+    {'name': 'NAT & FARMERS', 'alt_names': ['Nationalist and Farmers']},
+    {'name': 'VFU', 'alt_names': ['Victorian Farmers Union']},
+    {'name': 'IND LIB', 'alt_names': ['Independent Liberal']},
+    {'name': 'NATS WA', 'alt_names': ['National Party of Australia (WA)']},
+    {'name': 'FFP', 'alt_names': ['Family First Party']},
+    {'name': 'TRP', 'alt_names': ['Tariff Reform Party']},
+    {'name': 'CLP', 'alt_names': ['Country Liberal Party (Northern Territory)']},
+    {'name': 'NDP', 'alt_names': ['Nuclear Disarmament Party']},
+    {'name': 'IND PROT', 'alt_names': ['Independent Protectionist']},
+    {'name': 'WAP', 'alt_names': ['Western Australia Party']},
+    {'name': 'IND NAT', 'alt_names': ['Independent National(ist)']},
+    {'name': 'PROG LAB', 'alt_names': ['Progressive Labor']},
+    {'name': 'FU', 'alt_names': ['Farmers Union']},
+    {'name': 'CA', 'alt_names': ['Centre Alliance']},
+    {'name': 'NXT', 'alt_names': ['Nick Xenophon Team']},
+    {'name': 'LM', 'alt_names': ['Liberal Movement']},
+    {'name': 'NAT LIB', 'alt_names': ['National Liberal Party']},
+    {'name': 'DHJP', 'alt_names': ['Derryn Hinchs Justice Party']},
+    {'name': 'JLN', 'alt_names': ['Jacqui Lambie Network', 'Jacki Lambie Network']},
+    {'name': 'PUP', 'alt_names': ['Palmer United Party']},
+    {'name': 'APA', 'alt_names': ['Australian Progressive Alliance']},
+    {'name': 'LDP', 'alt_names': ['Liberal Democratic Party']},
+    {'name': 'REV TAR', 'alt_names': ['Revenue Tariff']},
+    {'name': 'AMEP', 'alt_names': ['Australian Motoring Enthusiast Party']},
+    {'name': 'FSU', 'alt_names': ['Farmers and Settlers Union']},
+    {'name': 'ST CP', 'alt_names': ['State Country Party']},
+    {'name': 'UCP', 'alt_names': ['United Country Party']},
+    {'name': 'PP', 'alt_names': ['Progress Party']},
+    {'name': 'UNITE AP', 'alt_names': ['Unite Australia Party (John Siddons Group)']},
+    {'name': 'IND UAP', 'alt_names': ['Independent United Australia Party']},
+    {'name': 'C PROG', 'alt_names': ['Country Progress Party']},
+    {'name': 'AP', 'alt_names': ['Australia Party']},
+    {'name': 'FCP', 'alt_names': ['Federal Country Party']},
 ]
 
 parl, created = Parl.objects.get_or_create(
@@ -147,7 +169,7 @@ def parse_mdb_data(verbosity=0):
             first_name=pol['firstName'],
             unique_id=pol['uniqueID']
             )
-###########            
+###########
         person.title = names[-1].find('ANREDE_TITEL').text
         person.academic_title = names[-1].find('AKAD_TITEL').text
         ortszusatz = names[-1].find('ORTSZUSATZ').text
@@ -189,35 +211,7 @@ def parse_mdb_data(verbosity=0):
                 print("Person: {} {}".format(person.adel, person))
 
         person.year_of_birth=person.dob.year
-        person.place_of_birth = biodata.find('GEBURTSORT').text
-        if biodata.find('GEBURTSLAND').text is None:
-            person.country_of_birth = cities.models.Country.objects.get(name="Germany")
-        else:
-            country_of_birth = biodata.find('GEBURTSLAND').text
-            if verbosity > 0:
-                print("country_of_birth: {}".format(country_of_birth))
-            try:
-                person.country_of_birth = cities.models.Country.objects.get(
-                    name=country_of_birth
-                )
-            except Country.DoesNotExist:
-                if map_countries and (country_of_birth in country_table["de"].values or
-                        country_of_birth in country_special.keys()):
-                    if country_of_birth in country_table["de"].values:
-                        country_en = country_table["en"][country_table["de"] == country_of_birth].values[0]
-                    else:
-                        country_en = country_special[country_of_birth]
-                    try:
-                        person.country_of_birth = cities.models.Country.objects.get(
-                                name=country_en
-                            )
-                    except Country.DoesNotExist:
-                        print("Warning: Did not find country of birth: {}".format(country_en))
-                        warn += 1
 
-                else:
-                    print("Warning: Did not find country of birth: {}".format(country_of_birth))
-                    warn += 1
         person.date_of_death = german_date(biodata.find('STERBEDATUM').text)
         if biodata.find('GESCHLECHT').text == "männlich":
             person.gender = Person.MALE
@@ -240,9 +234,9 @@ def parse_mdb_data(verbosity=0):
                 print("Warning: Party not found: {}".format(biodata.find("PARTEI_KURZ").text))
                 warn += 1
 
-        person.active_country = Country.objects.get(name='Germany')
+        person.active_country = Country.objects.get(name='Australia')
         person.positions = ['parliamentarian']
-        person.information_source = "MDB Stammdata"
+        person.information_source = "AustralianPoliticians"
         person.save()
 
 
