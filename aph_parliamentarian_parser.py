@@ -169,15 +169,27 @@ def parse_mdb_data(verbosity=0):
             first_name=pol['firstName'],
             unique_id=pol['uniqueID']
             )
-###########
-        person.title = names[-1].find('ANREDE_TITEL').text
-        person.academic_title = names[-1].find('AKAD_TITEL').text
-        ortszusatz = names[-1].find('ORTSZUSATZ').text
-        if ortszusatz is not None:
-            person.ortszusatz = ortszusatz.strip('() ')
 
-        person.adel = names[-1].find('ADEL').text
+        # profile information
+        title = pol['title']
+        if title is not None:
+            person.title = title
 
+        person.year_of_birth=person.dob.year
+
+        person.date_of_death = german_date(biodata.find('STERBEDATUM').text)
+        if biodata.find('GESCHLECHT').text == "männlich":
+            person.gender = Person.MALE
+        elif biodata.find('GESCHLECHT').text == "weiblich":
+            person.gender = Person.FEMALE
+        else:
+            print(biodata.find('GESCHLECHT').text)
+        #person.family_status = biodata.find('FAMILIENSTAND').text
+        #person.religion = biodata.find('RELIGION').text
+        person.occupation = biodata.find('BERUF').text
+        person.short_bio = biodata.find('VITA_KURZ').text
+
+        # additional names
         surnames_list = []
         firstnames_list = []
 
@@ -210,20 +222,7 @@ def parse_mdb_data(verbosity=0):
             else:
                 print("Person: {} {}".format(person.adel, person))
 
-        person.year_of_birth=person.dob.year
-
-        person.date_of_death = german_date(biodata.find('STERBEDATUM').text)
-        if biodata.find('GESCHLECHT').text == "männlich":
-            person.gender = Person.MALE
-        elif biodata.find('GESCHLECHT').text == "weiblich":
-            person.gender = Person.FEMALE
-        else:
-            print(biodata.find('GESCHLECHT').text)
-        #person.family_status = biodata.find('FAMILIENSTAND').text
-        #person.religion = biodata.find('RELIGION').text
-        person.occupation = biodata.find('BERUF').text
-        person.short_bio = biodata.find('VITA_KURZ').text
-
+        # political party
         try:
             person.party = Party.objects.get(alt_names__contains=[biodata.find('PARTEI_KURZ').text])
         except Party.DoesNotExist:
@@ -238,93 +237,6 @@ def parse_mdb_data(verbosity=0):
         person.positions = ['parliamentarian']
         person.information_source = "AustralianPoliticians"
         person.save()
-
-
-        wp_list = []
-
-        # loop over wahlperioden
-        for wp in mdb.findall('WAHLPERIODEN/WAHLPERIODE'):
-
-            wp_list.append(int(wp.find('WP').text))
-
-            # do not use seats of the Volkskammer
-            if wp.find('MANDATSART').text == "Volkskammer":
-                continue
-
-            pp, created = ParlPeriod.objects.get_or_create(
-                parliament=parl,
-                n=wp.find('WP').text
-                )
-
-            seat, created = Seat.objects.get_or_create(
-                parlperiod=pp,
-                occupant=person
-                )
-            seat.start_date = german_date(wp.find('MDBWP_VON').text)
-            seat.end_date = german_date(wp.find('MDBWP_BIS').text)
-
-            # loop over institutions
-            for ins in wp.findall('INSTITUTIONEN/INSTITUTION'):
-
-                if ins.find('INSART_LANG').text == 'Fraktion/Gruppe':
-
-                    try:
-                        party = Party.objects.get(
-                                alt_names__contains=[ins.find('INS_LANG').text]
-                                )
-                    except Party.DoesNotExist:
-                        if ins.find('INS_LANG').text == "Fraktionslos":
-                            person.party = Party.objects.get(name="fraktionslos")
-                            pass
-
-                        else:
-                            print("Warning: Party not found: {}".format(ins.find('INS_LANG').text))
-                            warn += 1
-
-                else:
-                    if verbosity > 0:
-                        print("Other institution: {}".format(ins.find('INS_LANG').text))
-
-            if wp.find('MANDATSART').text == "Direktwahl":
-                seat.seat_type = Seat.DIRECT
-                direct_region = wp.find('WKR_LAND').text
-                try:
-                    wk, created = Constituency.objects.get_or_create(
-                        parliament=parl,
-                        number=wp.find('WKR_NUMMER').text,
-                        name=wp.find('WKR_NAME').text,
-                        region=Region.objects.get(name=LANDS[direct_region])
-                        )
-                    wk.save()
-                    seat.constituency = wk
-                    seat.save()
-                except KeyError:
-                    print("Warning: Region of Direktmandat not found: {}".format(direct_region))
-                    warn += 1
-                except Region.DoesNotExist:
-                    print("Warning: Region of Direktmandat not in regions: {}".format(direct_region))
-                    warn += 1
-
-            elif wp.find('MANDATSART').text == "Landesliste":
-                seat.seat_type = Seat.LIST
-                list_region = wp.find('LISTE').text
-                try:
-                    pl, created = PartyList.objects.get_or_create(
-                        parlperiod=pp,
-                        region=Region.objects.get(name=LANDS[list_region])
-                        )
-                    seat.list = pl
-                    seat.save()
-                    pl.save()
-                except KeyError:
-                    print("Warning: Region of Landesliste not found: {}".format(list_region))
-                    warn += 1
-                except Region.DoesNotExist:
-                    print("Warning: Region of Landesliste not in regions: {}".format(list_region))
-                    warn += 1
-
-            else:
-                print("Warning: Unknown Mandatsart: {}".format(wp.find('MANDATSART').text))
 
         person.in_parlperiod = wp_list
         person.save()
