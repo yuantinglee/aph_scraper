@@ -44,10 +44,9 @@ import xml.etree.ElementTree as ET
 
 map_countries = True
 
-
-
 #MDB_LINK = 'https://www.bundestag.de/resource/blob/472878/e207ab4b38c93187c6580fc186a95f38/MdB-Stammdaten-data.zip'
 POL_FNAME = data_dir + 'all.csv'
+PARTY_FNAME = data_dir + 'by_party.csv'
 
 
 PARTY_NAMES = [
@@ -158,11 +157,7 @@ def parse_mdb_data(verbosity=0):
 
     # going through entries for mdbs
     for i in df_pol.index:
-        #if mdb.tag == "VERSION":
-        #    continue
-        #names = mdb.find('NAMEN')
-        #biodata = mdb.find('BIOGRAFISCHE_ANGABEN')
-        pol = df_all.loc[i]
+        pol = df_pol.loc[i]
 
         person = Person(
             surname=pol['surname'],
@@ -175,34 +170,21 @@ def parse_mdb_data(verbosity=0):
         if title is not None:
             person.title = title
 
-        person.year_of_birth=person.dob.year
+        person.year_of_birth = pol['birthYear']
+        person.date_of_death = pol['deathDate']
 
-        person.date_of_death = german_date(biodata.find('STERBEDATUM').text)
-        if biodata.find('GESCHLECHT').text == "männlich":
+        if pol['gender'] == "male":
             person.gender = Person.MALE
-        elif biodata.find('GESCHLECHT').text == "weiblich":
+        else pol['gender'] == "female":
             person.gender = Person.FEMALE
-        else:
-            print(biodata.find('GESCHLECHT').text)
-        #person.family_status = biodata.find('FAMILIENSTAND').text
-        #person.religion = biodata.find('RELIGION').text
-        person.occupation = biodata.find('BERUF').text
-        person.short_bio = biodata.find('VITA_KURZ').text
 
         # additional names
-        surnames_list = []
+        # surnames_list = []
         firstnames_list = []
 
-        for name in names:
-            surname = name.find('NACHNAME').text
+        for name in pol['allOtherNames']:
 
-            if isinstance(surname, str):
-                surnames_list.append(surname)
-
-                if len(surname.split(' ')) > 1:
-                    surnames_list.append(surname.split(" ")[-1])
-
-            firstname = name.find('VORNAME').text
+            firstname = name
 
             if isinstance(firstname, str):
                 firstnames_list.append(firstname)
@@ -212,29 +194,46 @@ def parse_mdb_data(verbosity=0):
                         if len(fname) > 2:
                             firstnames_list.append(fname)
 
-        person.alt_surnames = list(set(surnames_list))
+        for name in pol['commonName']:
+
+            commonname = name
+
+            if isinstance(commonname, str):
+                firstnames_list.append(commonname)
+
+                if len(commonname.split(' ')) > 1:
+                    for cname in commonname.split(" "):
+                        if len(cname) > 2:
+                            firstnames_list.append(cname)
+
         person.alt_first_names = list(set(firstnames_list))
 
         if verbosity > 0:
             # print name
-            if person.adel is None:
-                print("Person: {}".format(person))
-            else:
-                print("Person: {} {}".format(person.adel, person))
+            print("Person: {}".format(person))
 
         # political party
-        try:
-            person.party = Party.objects.get(alt_names__contains=[biodata.find('PARTEI_KURZ').text])
-        except Party.DoesNotExist:
-            if biodata.find('PARTEI_KURZ').text == 'Plos':
-                person.party = Party.objects.get(name="parteilos")
-                pass
-            else:
-                print("Warning: Party not found: {}".format(biodata.find("PARTEI_KURZ").text))
-                warn += 1
+        # match politician ID in df_pol to df_party to find party
+        #try:
+        #    person.party = Party.objects.get(alt_names__contains=)
+        #except Party.DoesNotExist:
+        #    if biodata.find('PARTEI_KURZ').text == 'Plos':
+        #        person.party = Party.objects.get(name="parteilos")
+        #        pass
+        #    else:
+        #        print("Warning: Party not found: {}".format(biodata.find("PARTEI_KURZ").text))
+        #        warn += 1
+
+        # name id
+
 
         person.active_country = Country.objects.get(name='Australia')
-        person.positions = ['parliamentarian']
+        # adding positions
+        if pol['member'] == 1:
+            person.positions = ['Member']
+        if pol['senator'] == 1:
+            person.positions = ['Senator']
+
         person.information_source = "AustralianPoliticians"
         person.save()
 
@@ -257,7 +256,7 @@ if __name__ == '__main__':
         Person.objects.all().delete()
 
     elif delete_persons:
-        Person.objects.filter(information_source="MDB Stammdata").delete()
+        Person.objects.filter(information_source="AustralianPoliticians").delete()
 
     # getting the data
     fetch_mdb_data()
