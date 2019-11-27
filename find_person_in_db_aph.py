@@ -1,7 +1,10 @@
-def find_person_in_db(name, add_info=dict(), create=True,
+# modifying find_person_in_db from TEI_parser for APH
+
+def find_person_in_db_aph(name, add_info={}, create=True,
                       first_entry_for_unresolved_ambiguity=True, verbosity=1):
 
-    if name.strip('-– ()') is '' or name is None:
+    #if name.strip('-– ()') is '' or name is None:
+    if name is None:
         print("! Warning: no valid name string given")
         if create:
             person, created = pm.Person.objects.get_or_create(surname='Error: no valid string', first_name='')
@@ -11,57 +14,79 @@ def find_person_in_db(name, add_info=dict(), create=True,
 
     original_string = name
 
-    if 'wp' in add_info.keys():
-        wp = add_info['wp']
+    if 'pp' in add_info.keys():
+        pp = add_info['pp']
     else:
-        wp = None
+        pp = None
 
-    name = clean_text(name)
-    name = INHYPHEN.sub(r'\1\2', name)
-    name = name.replace('\n', ' ')
-    name = NAME_REMOVE.sub('', name)
+    if 'date' in add_info.keys():
+        date = add_info['date']
 
-    position = PERSON_POSITION.search(name)
-    if "position" in add_info.keys():
-        if position:
-            if add_info["position"] != position:
-                print("! Warning: position does not match ({}, {})".format(
-                    position, add_info["position"]))
-        position = add_info["position"]
+    name = re.sub(r'\([^)]*\)', '', name)
+    name = name.replace('  ', ' ')
+    name = name.replace('Dr ', '')
+    name = name.replace('Mr ', '')
+    name = name.replace('The ', '')
 
-    if position and verbosity > 1:
-        print("= position: {}".format(position.group(0)))
 
-        position = position.group(0)
-    cname = PERSON_POSITION.sub('', name).strip(' ,')
-
-    title = TITLE.match(cname)
-    if title:
-        title = title.group(0)
-    cname = TITLE.sub('', cname).strip()
-
-    party = PERSON_PARTY.match(cname)
-    if party:
-        party = party.group(2)
-    if "party" in add_info.keys():
-        add_info["party"] = add_info["party"].strip()
-        if party:
-            if add_info["party"] != party:
-                print("! Warning: Parties not matching ({}, {})".format(party, add_info["party"]))
-        party = add_info["party"]
-    cname = PERSON_PARTY.sub(r'\1', cname)
-
-    cname = correct_name_parsing_errors(cname)
-
-    if len(cname.split(' ')) > 1:
-        surname = cname.split(' ')[-1].strip('-– ()') # remove beginning and tailing "-", "(", ")" and white space
-        firstname = cname.split(' ')[0].strip('-– ()­')
+    if len(name.split(' ')) > 1:
+        surname = name.split(' ')[-1]
+        firstname = name.split(' ')[0]
     else:
-        surname = cname.strip('-– ()')
+        surname = name
         firstname = ''
 
+    if "nameid" in add_info.keys():
+        name_id = add_info['nameid']
+    else:
+        name_id = None
+
+    #! search using person.position ?
+    #! could be important if speaker holds ministerial position
+    # position = PERSON_POSITION.search(name)
+    if "role" in add_info.keys():
+        # if position:
+        #    if add_info["position"] != position:
+        #        print("! Warning: position does not match ({}, {})".format(
+        #            position, add_info["position"]))
+        position = add_info["role"]
+    else:
+        position = None
+
+        if position and verbosity > 1:
+            print("= position: {}".format(position.group(0)))
+
+    #title = TITLE.match(cname)
+    #if title:
+    #    title = title.group(0)
+    #cname = TITLE.sub('', cname).strip()
+
+    if "party" in add_info.keys() and not 'N/A':
+        party = add_info['party']
+        p_party, created = pm.Party.objects.get_or_create(name=party)
+    else:
+        party = None
+
+    if "electorate" in add_info.keys():
+        electorate = add_info['electorate']
+    else:
+        electorate = None
+
     # find matching entry in database
-    query = pm.Person.objects.filter(alt_surnames__contains=[surname], alt_first_names__contains=[firstname])
+    # provision for Speaker of Parliament
+    if name_id != '10000':
+        query = pm.Person.objects.filter(name_id=name_id)
+
+    elif name_id == '10000':
+        postquery = pm.Post.objects.get(
+        parlperiod__n=pp,
+        start_date__lte = date,
+        end_date__gte = date
+        )
+
+        parl_speaker = postquery.person
+        name_id = parl_speaker.name_id
+        return parl_speaker
 
     if len(query) == 1:
         return query.first()
@@ -70,43 +95,21 @@ def find_person_in_db(name, add_info=dict(), create=True,
         if party:
             rquery = query.filter(party__alt_names__contains=[party])
             if len(rquery) == 1:
-                return emit_person(rquery.first(), period=wp, title=title, party=party, ortszusatz=ortszusatz)
+                return emit_person(rquery.first(), period=pp, party=party)
             elif len(rquery) > 1:
                 query = rquery
 
-        if ortszusatz:
-            rquery = query.filter(ortszusatz=ortszusatz)
+        if pp:
+            rquery = query.filter(in_parlperiod__contains=[pp])
             if len(rquery) == 1:
-                return emit_person(rquery.first(), period=wp, title=title, party=party, ortszusatz=ortszusatz)
-            elif len(rquery) > 1:
-                query = rquery
-
-        if title:
-            rquery = query.filter(title=title)
-            if len(rquery) == 1:
-                return emit_person(rquery.first(), period=wp, title=title, party=party, ortszusatz=ortszusatz)
-            elif len(rquery) > 1:
-                query = rquery
-        else:
-            rquery = query.filter(title=None)
-            if len(rquery) == 1:
-                return emit_person(rquery.first(), period=wp, title=title, party=party, ortszusatz=ortszusatz)
-            elif len(rquery) > 1:
-                query = rquery
-
-        if wp:
-            rquery = query.filter(in_parlperiod__contains=[wp])
-            if len(rquery) == 1:
-                return emit_person(rquery.first(), period=wp, title=title, party=party, ortszusatz=ortszusatz)
+                return emit_person(rquery.first(), period=pp, party=party)
             elif len(rquery) > 1:
                 query = rquery
 
         print("! Warning: Could not distinguish between persons!")
         print("For name string: {}".format(name))
         print("first name: {}, surname: {}".format(firstname, surname))
-        print("title: {}, party: {}, position: {}, ortszusatz: {}".format(title, party, position, ortszusatz))
         print("Query: {}".format(query))
-        print("Clean names: {}".format([pers.clean_name for pers in query]))
 
         if first_entry_for_unresolved_ambiguity:
             print('Taking first entry of ambiguous results')
@@ -116,28 +119,32 @@ def find_person_in_db(name, add_info=dict(), create=True,
 
     # if query returns no results
     else:
-        print("Person not found in database: {}".format(cname))
+        print("Person not found in database: {}".format(name))
+
         if verbosity > 0:
             print("name: {}".format(name))
             print("first name: {}, surname: {}".format(firstname, surname))
-            print("title: {}, party: {}, position: {}, ortszusatz: {}".format(title, party, position, ortszusatz))
 
         if create:
             person = pm.Person(surname=surname, first_name=firstname)
-            if title:
-                person.title = title
+
+            #if title:
+            #    person.title = title
+
             if party:
                 try:
-                    party_obj = pm.Party.objects.get(alt_names__contains=[party])
+                    party_obj = pm.Party.objects.get(name=party)
                     person.party = party_obj
+
                 except pm.Party.DoesNotExist:
-                    print("! Warning: party could not be identified when creating new person in find_person_in_db: {}".format(party))
-            if ortszusatz:
-                person.ortszusatz = ortszusatz
+                    print("! Warning: party could not be identified: {}".format(party))
 
             if position:
                 person.positions = [position]
                 # use position with data model "Post" ?
+
+            if name_id != 10000 and not None:
+                person.name_id = name_id
 
             if 'session' in add_info.keys():
                 session_str = "{sn:03d}".format(sn=add_info['session'])
@@ -149,12 +156,26 @@ def find_person_in_db(name, add_info=dict(), create=True,
             else:
                 source_str = ""
 
-            person.in_parlperiod = [wp]
-            person.active_country = cmodels.Country.objects.get(name='Germany')
-            person.information_source = "from protocol scraping " \
-                                        "{wp:02d}/{sn} {type}: {name}".format(wp=wp, sn=session_str,
-                                                                              type=source_str, name=original_string)
+            person.in_parlperiod = [pp]
+            person.active_country = cmodels.Country.objects.get(name='Australia')
+
             person.save()
+
+            seat, created = pm.Seat.objects.get_or_create(
+            parlperiod=pm.ParlPeriod.objects.get(n=pp),
+            occupant=person
+            )
+
+            if electorate:
+                constituency, created = pm.Constituency.objects.get_or_create(
+                parliament=pm.Parl.objects.get(country=cmodels.Country.objects.get(name="Australia")),
+                name=electorate
+                )
+                constituency.save()
+                seat.constituency = constituency
+
+            seat.save()
+
             print("Created person: {}".format(person))
             return person
 
