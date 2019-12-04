@@ -1,4 +1,10 @@
 # modifying find_person_in_db from TEI_parser for APH
+import re
+from normality import normalize
+
+# import from appended path
+import parliament.models as pm
+import cities.models as cmodels
 
 def find_person_in_db_aph(name, add_info={}, create=True,
                       first_entry_for_unresolved_ambiguity=True, verbosity=1):
@@ -75,7 +81,7 @@ def find_person_in_db_aph(name, add_info={}, create=True,
     # find matching entry in database
     # provision for Speaker of Parliament
     if name_id != '10000':
-        query = pm.Person.objects.filter(name_id=name_id)
+        query = pm.Person.objects.filter(unique_id=name_id)
 
     elif name_id == '10000':
         postquery = pm.Post.objects.get(
@@ -85,7 +91,7 @@ def find_person_in_db_aph(name, add_info={}, create=True,
         )
 
         parl_speaker = postquery.person
-        name_id = parl_speaker.name_id
+        name_id = parl_speaker.unique_id
         return parl_speaker
 
     if len(query) == 1:
@@ -181,3 +187,15 @@ def find_person_in_db_aph(name, add_info={}, create=True,
 
         else:
             return None
+
+# copied from normdatei.text
+def clean_text(text):
+
+    text = text.replace('\r', '\n')
+    text = text.replace(u'\xa0', ' ')
+    text = text.replace(u'\x96', '-')
+    text = text.replace(u'\xad', '-')
+    text = text.replace(u'\u2014', '–')
+    # text = text.replace(u'\u2013', '–')
+    return text
+

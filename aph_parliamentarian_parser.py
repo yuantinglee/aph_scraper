@@ -55,7 +55,7 @@ PARTY_NAMES = [
     {'name': 'NAT', 'alt_names': ['Nationalist Party']},
     {'name': 'ALP', 'alt_names': ['Australian Labor Party']},
     {'name': 'NCP', 'alt_names': ['National Country Party']},
-    {'name': 'NPA', 'alt_names': ['National Party of Australia']}
+    {'name': 'NPA', 'alt_names': ['National Party of Australia']},
     {'name': 'AD', 'alt_names': ['Australian Democrats']},
     {'name': 'ALP (N-C)', 'alt_names': ['Australian Labor Party (Non-Communist)']},
     {'name': 'NP', 'alt_names': ['The Nationals']},
@@ -108,7 +108,7 @@ PARTY_NAMES = [
     {'name': 'IND UAP', 'alt_names': ['Independent United Australia Party']},
     {'name': 'C PROG', 'alt_names': ['Country Progress Party']},
     {'name': 'AP', 'alt_names': ['Australia Party']},
-    {'name': 'FCP', 'alt_names': ['Federal Country Party']},
+    {'name': 'FCP', 'alt_names': ['Federal Country Party']}
 ]
 
 parl, created = Parl.objects.get_or_create(
@@ -127,28 +127,7 @@ def update_parties():
         party.alt_names = p['alt_names']
         party.save()
 
-
-def fetch_mdb_data():
-    if not os.path.exists(MDB_FNAME):
-        print("fetching data from bundestag website")
-        url = urlopen(MDB_LINK)
-        zipfile = ZipFile(BytesIO(url.read()))
-        zipfile.extractall("data/mdbs")
-        print(zipfile.namelist())
-    return
-
-
-def german_date(str):
-    if str is None:
-        return None
-    try:
-        return datetime.datetime.strptime(str,"%d.%m.%Y").date()
-    except ValueError:
-        return datetime.datetime.strptime(str,"%Y").date()
-
-
-
-def parse_mdb_data(verbosity=0):
+def parse_aph_data(verbosity=0):
 
     warn = 0
 
@@ -160,51 +139,57 @@ def parse_mdb_data(verbosity=0):
         pol = df_pol.loc[i]
 
         person = Person(
-            surname=pol['surname'],
-            first_name=pol['firstName'],
-            unique_id=pol['uniqueID']
+            surname=str(pol['surname']),
+            first_name=str(pol['firstName']),
+            unique_id=str(pol['uniqueID'])
             )
 
         # profile information
-        title = pol['title']
+        title = str(pol['title'])
         if title is not None:
             person.title = title
 
-        person.year_of_birth = pol['birthYear']
-        person.date_of_death = pol['deathDate']
+        if pol['birthDate'] != float('nan'):
+            dob = datetime.strptime(str(pol['birthDate']), '%Y-%m-%d')
+        yob = int(pol['birthYear'])
+
+        if dob is not None:
+            person.date_of_birth = dob
+        else:
+            person.year_of_birth = yob
+
+        dod = datetime.strptime(str(pol['deathDate']), '%Y-%m-%d')
+        person.date_of_death = dod
 
         if pol['gender'] == "male":
             person.gender = Person.MALE
-        else pol['gender'] == "female":
+        elif pol['gender'] == "female":
             person.gender = Person.FEMALE
 
         # additional names
         # surnames_list = []
         firstnames_list = []
 
-        for name in pol['allOtherNames']:
+        firstname = pol['allOtherNames']
 
-            firstname = name
+        if isinstance(firstname, str):
+            firstnames_list.append(firstname)
 
-            if isinstance(firstname, str):
-                firstnames_list.append(firstname)
+            if len(firstname.split(' ')) > 1:
+                for fname in firstname.split(" "):
+                    if len(fname) > 2:
+                        firstnames_list.append(fname)
 
-                if len(firstname.split(' ')) > 1:
-                    for fname in firstname.split(" "):
-                        if len(fname) > 2:
-                            firstnames_list.append(fname)
 
-        for name in pol['commonName']:
+        commonname = pol['commonName']
 
-            commonname = name
+        if isinstance(commonname, str):
+            firstnames_list.append(commonname)
 
-            if isinstance(commonname, str):
-                firstnames_list.append(commonname)
-
-                if len(commonname.split(' ')) > 1:
-                    for cname in commonname.split(" "):
-                        if len(cname) > 2:
-                            firstnames_list.append(cname)
+            if len(commonname.split(' ')) > 1:
+                for cname in commonname.split(" "):
+                    if len(cname) > 2:
+                        firstnames_list.append(cname)
 
         person.alt_first_names = list(set(firstnames_list))
 
@@ -258,14 +243,12 @@ if __name__ == '__main__':
     elif delete_persons:
         Person.objects.filter(information_source="AustralianPoliticians").delete()
 
-    # getting the data
-    fetch_mdb_data()
     # updating the parties
-    update_parties()
+    # update_parties()
     # parsing the data
     parse_mdb_data(verbosity=0)
-
-    add_party_colors = True
+    # add parties
+    add_party_colors = False
 
     if add_party_colors:
         pcolours = [
