@@ -21,7 +21,7 @@ import platform
     #tei_path = "/media/Data/MCC/Parliament Germany/GermaParlTEI-master"
 
 sys.path.append('/home/leey/Documents/Data/tmv/BasicBrowser/')
-tei_path = "/home/leey/Documents/Data/australian_parliament_downloads/downloads_coal"
+xml_path = "/home/leey/Documents/Data/australian_parliament_downloads/downloads_coal"
 
 #sys.path.append('/home/galm/software/django/tmv/BasicBrowser/')
 
@@ -35,8 +35,9 @@ import cities.models as cmodels
 from django.contrib.auth.models import User
 import tmv_app.models as tm
 
-from parsing_utils import POI, dehyphenate_with_space, clean_text, find_person_in_db_aph
-from regular_expressions_global import POI_MARK
+#from parsing_utils import dehyphenate_with_space, clean_text
+from find_person_in_db_aph import *
+#from regular_expressions_global import POI_MARK
 
 # ============================================================
 # write output to file and terminal
@@ -45,8 +46,9 @@ import pprint
 pretty_printer = pprint.PrettyPrinter(indent=4)
 
 time_stamp = datetime.now().strftime("%y%m%d_%H%M%S")
-output_file = "./parlsessions_tei_parser_output_" + time_stamp + ".log"
+output_file = "./parlsessions_aph_parser_output_" + time_stamp + ".log"
 print("log file: {}".format(output_file))
+
 
 class Logger(object):
     def __init__(self):
@@ -64,7 +66,7 @@ class Logger(object):
         pass
 
 # ============================================================
-class parse_tei_items(object):
+class parse_xml_items(object):
 
     def __init__(self, xtree, v=1, period=None, session=None):
         self.v = v
@@ -140,9 +142,21 @@ class parse_tei_items(object):
         para.save()
         return para
 
+    def add_interjection(self, text, speaker, paragraph):
+        interjection = pm.Interjection(
+                paragraph=paragraph,
+                text=text
+                )
+        interjection.type = pm.Interjection.SPEECH
+        interjection.save()
+
+        if speaker:
+            interjection.persons.add(speaker)
+
     def run(self):
 
         self.get_or_create_objects()
+        accepted_tags = ['speech', 'question', 'answer']
 
         ### start parsing of speeches
         for div in self.divs:
@@ -151,61 +165,95 @@ class parse_tei_items(object):
                 print("div type: {}".format(div.xpath("type/text()")))
 
             for uts in div.iter('talk.start'):
-                for name in uts.xpath('talker//name'):
-                    if name.get('role') == 'metadata':
-                        namemd = name.text.split(', ')
-                        if len(namemd) == 1:
-                            names = namemd[0]
-                        else:
-                            names = namemd[1] + ' ' + namemd[0]
+                if uts.getparent().tag in accepted_tags:
+                    for name in uts.xpath('talker//name'):
+                        if name.get('role') == 'metadata':
+                            namemd = name.text.split(', ')
+                            if len(namemd) == 1:
+                                names = namemd[0]
+                            else:
+                                names = namemd[1] + ' ' + namemd[0]
 
-                # match speaker to database:
-                info_dict = {}
-                for nameidxp in uts.xpath('talker/name.id/text()'): info_dict['nameid'] = nameidxp
-                for partyxp in uts.xpath('talker/party/text()'): info_dict['party'] = partyxp
-                for electoratexp in uts.xpath('talker/electorate/text()'): info_dict['electorate'] = electoratexp
-                for rolexp in uts.xpath('talker/role/text()'): info_dict['role'] = rolexp
-                info_dict['pp'] = self.pp
-                info_dict['session'] = self.session
-                info_dict['date'] = self.date
+                    # match speaker to database:
+                    info_dict = {}
+                    for nameidxp in uts.xpath('talker/name.id/text()'): info_dict['nameid'] = nameidxp
+                    for partyxp in uts.xpath('talker/party/text()'): info_dict['party'] = partyxp
+                    for electoratexp in uts.xpath('talker/electorate/text()'): info_dict['electorate'] = electoratexp
+                    for rolexp in uts.xpath('talker/role/text()'): info_dict['role'] = rolexp
+                    info_dict['pp'] = self.pp
+                    info_dict['session'] = self.session
+                    info_dict['date'] = self.date
 
-                speaker = find_person_in_db_aph(names, add_info=info_dict, verbosity=self.v)
+                    speaker = find_person_in_db_aph(names, add_info=info_dict, verbosity=self.v)
 
-                if speaker is None:
-                    print(namemd[1],namemd[0])
+                    if speaker is None:
+                        print(namemd[1],namemd[0])
 
-                #! to fix
-                #speaker_role_set = pm.SpeakerRole.objects.filter(alt_names__contains={info_dict['role']})
-                #if len(speaker_role_set) < 1:
-                #    speaker_role = pm.SpeakerRole(name=info_dict['role'], alt_names={info_dict['role']})
-                #    speaker_role.save()
-                #else:
-                #    speaker_role = speaker_role_set.first()
-                #    if len(speaker_role_set) > 1:
-                #        print("Warning: several speaker roles matching")
+                    #! to fix
+                    #speaker_role_set = pm.SpeakerRole.objects.filter(alt_names__contains={info_dict['role']})
+                    #if len(speaker_role_set) < 1:
+                    #    speaker_role = pm.SpeakerRole(name=info_dict['role'], alt_names={info_dict['role']})
+                    #    speaker_role.save()
+                    #else:
+                    #    speaker_role = speaker_role_set.first()
+                    #    if len(speaker_role_set) > 1:
+                    #        print("Warning: several speaker roles matching")
 
-                ut = pm.Utterance(
-                    document=self.doc,
-                    speaker=speaker,
-                    #speaker_role=speaker_role
-                )
-                ut.save()
+                    ut = pm.Utterance(
+                        document=self.doc,
+                        speaker=speaker,
+                        #speaker_role=speaker_role
+                    )
+                    ut.save()
 
-                for c in uts.iter():
-                    if self.v > 1:
-                        print("{}: {}".format(c.tag, c.text))
+                    for c in uts.iter():
+                        if self.v > 1:
+                            print("{}: {}".format(c.tag, c.text))
 
-                    if c.tag == "para":
-                        if c.text:
-                            para = self.create_paragraph(c.text.strip(u'\u2014'), ut)
+                        if c.tag == "para":
+                            if c.text:
+                                para = self.create_paragraph(c.text.strip(u'\u2014'), ut)
 
-                for j in uts.xpath('following-sibling::para|parent::*/following-sibling::para|following-sibling::*/child::para'):
-                    if j.text:
-                        para = self.create_paragraph(j.text.strip(u'\u2014'), ut)
+
+                    for j in uts.xpath('following-sibling::*'):
+                        if j.tag == "para":
+                            if j.text:
+                                para = self.create_paragraph(j.text.strip(u'\u2014'), ut)
+
+                        elif j.tag == "interjection":
+                            # identify speaker here
+                            for name in j.xpath('talk.start/talker/name'):
+                                if name.get('role') == 'metadata':
+                                    namemd_inj = name.text.split(', ')
+                                    if len(namemd_inj) == 1:
+                                        names_inj = namemd_inj[0]
+                                    else:
+                                        names_inj = namemd_inj[1] + ' ' + namemd_inj[0]
+
+                                    # match speaker to database:
+                                    info_dict = {}
+                                    for nameidxp in j.xpath('talk.start/talker/name.id/text()'): info_dict['nameid'] = nameidxp
+                                    info_dict['pp'] = self.pp
+                                    info_dict['session'] = self.session
+                                    info_dict['date'] = self.date
+
+                                    speaker_inj = find_person_in_db_aph(names_inj, add_info=info_dict, verbosity=self.v)
+
+                                    if speaker_inj is None:
+                                        print(namemd_inj[1], namemd_inj[0])
+
+                            for k in j.xpath('child::*/child::para'):
+                                # add interjection text and create interjection
+                                if k.text:
+                                    inj = self.add_interjection(k.text, speaker_inj, para)
+
+                        elif j.tag == "continue":
+                            for con in j.xpath('child::*/child::para'):
+                                if con.text:
+                                    para = self.create_paragraph(con.text.strip(u'\u2014'), ut)
 
 # =================================================================================================================
 # main execution script
-
 if __name__ == '__main__':
 
     sys.stdout = Logger()
@@ -240,18 +288,14 @@ if __name__ == '__main__':
 
     if single_doc:
         # single file
-        #wp = 18
-        #session = 1
-
-        #xml_file = os.path.join(tei_path, "{wp:02d}/BT_{wp:02d}_{sn:03d}.xml".format(wp=wp, sn=session))
-        #namespaces = {'tei': 'http://www.tei-c.org/ns/1.0'}
-        xml_file = os.path.join(tei_path, "6593-3.xml")
+        xml_file = os.path.join(xml_path, "163-5858.xml")
+        #xml_file = os.path.join(xml_path, "6593-3.xml")
 
         print("reading from {}".format(xml_file))
 
         xtree = etree.parse(xml_file)
         etree.strip_tags(xtree, 'inline')
-        parser = parse_tei_items(xtree)
+        parser = parse_xml_items(xtree)
 
         # pm.Document.objects.filter(parlperiod__n=parser.wp, sitting=parser.session).delete()
         parser.run()
