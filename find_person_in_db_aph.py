@@ -62,26 +62,21 @@ def find_person_in_db_aph(name, add_info={}, create=True,
         if position and verbosity > 1:
             print("= position: {}".format(position.group(0)))
 
-    #title = TITLE.match(cname)
-    #if title:
-    #    title = title.group(0)
-    #cname = TITLE.sub('', cname).strip()
+    #if "party" in add_info.keys() and not 'N/A':
+    #    party = add_info['party']
+    #    p_party, created = pm.Party.objects.get_or_create(name=party)
+    #else:
+    #    party = None
 
-    if "party" in add_info.keys() and not 'N/A':
-        party = add_info['party']
-        p_party, created = pm.Party.objects.get_or_create(name=party)
-    else:
-        party = None
-
-    if "electorate" in add_info.keys():
-        electorate = add_info['electorate']
-    else:
-        electorate = None
+    #if "electorate" in add_info.keys():
+    #    electorate = add_info['electorate']
+    #else:
+    #    electorate = None
 
     # find matching entry in database
     # provision for Speaker of Parliament
     if name_id != '10000':
-        query = pm.Person.objects.filter(unique_id=name_id)
+        query = pm.Person.objects.filter(aph_id=name_id)
 
     elif name_id == '10000':
         postquery = pm.Post.objects.get(
@@ -91,7 +86,7 @@ def find_person_in_db_aph(name, add_info={}, create=True,
         )
 
         parl_speaker = postquery.person
-        name_id = parl_speaker.unique_id
+        name_id = parl_speaker.aph_id
         return parl_speaker
 
     if len(query) == 1:
@@ -134,9 +129,6 @@ def find_person_in_db_aph(name, add_info={}, create=True,
         if create:
             person = pm.Person(surname=surname, first_name=firstname)
 
-            #if title:
-            #    person.title = title
-
             if party:
                 try:
                     party_obj = pm.Party.objects.get(name=party)
@@ -150,7 +142,7 @@ def find_person_in_db_aph(name, add_info={}, create=True,
                 # use position with data model "Post" ?
 
             if name_id != 10000 and not None:
-                person.name_id = name_id
+                person.aph_id = name_id
 
             if 'session' in add_info.keys():
                 session_str = "{sn:03d}".format(sn=add_info['session'])
@@ -198,4 +190,3 @@ def clean_text(text):
     text = text.replace(u'\u2014', '–')
     # text = text.replace(u'\u2013', '–')
     return text
-
