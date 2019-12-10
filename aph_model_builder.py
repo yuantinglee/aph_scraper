@@ -43,34 +43,34 @@ def add_speaker(df):
     """Parses House Speakers from list to database"""
     # modify to add deputy speakers as well by including variable role?
 
-    for entry in df.itertuples():
-        surname = entry.Last_Name
-        first_name = entry.First_Name
+    for i in df.index:
+        entry = df.loc[i]
+        surname = entry['Last_Name']
+        first_name = entry['First_Name']
+        middle_name = entry['Middle_Names']
 
-        person, created = pm.Person.objects.get_or_create(
+        pquery = pm.Person.objects.filter(
         surname = surname,
-        first_name = first_name
+        first_name = first_name,
+        information_source = "AustralianPoliticians"
         )
+
+        if len(pquery) == 1:
+            person = pquery[0]
+
+        elif len(pquery) > 1:
+            rquery = pquery.filter(alt_first_names__contains=[middle_name])
+            if len(rquery) == 1:
+                person = rquery[0]
+
         #### Names
         #middle_names = []
         #for name in entry.Middle_Names:
         #    person.alt_first_names = middle_names.append(name)
 
-        # person.name_id = '10000'
-        if entry.Prefix != 'nan':
-            person.title = entry.Prefix
-
-        if entry.Title != 'nan':
-            person.adel = entry.Title
-
-        #### Parliamentary periods
-        person.positions = ['Speaker']
-
-        person.save()
-
         #### Dates
-        start_date = datetime.strptime(entry.Start_Date.strip(), '%d.%m.%Y')
-        end_date = datetime.strptime(entry.End_Date.strip(), '%d.%m.%Y')
+        start_date = datetime.strptime(entry['Start_Date'].strip(), '%d.%m.%Y')
+        end_date = datetime.strptime(entry['End_Date'].strip(), '%d.%m.%Y')
 
         n_years = end_date.year - start_date.year
         years = []
