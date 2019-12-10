@@ -5,8 +5,57 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+```{r message=FALSE}
+#devtools::install_github("RohanAlexander/AustralianPoliticians")
+#load("/home/leey/Documents/Data/AustralianPoliticians/data/all.rda")
 ```
 
 ```{r}
+all <- AustralianPoliticians::all %>% as_tibble()
+by_division_mps <- AustralianPoliticians::by_division_mps %>% as_tibble()
+by_party <- AustralianPoliticians::by_party %>% as_tibble()
+by_state_senators <- AustralianPoliticians::by_state_senators %>% as_tibble()
+uniqueID_to_aphID <- AustralianPoliticians::uniqueID_to_aphID %>% as_tibble()
+```
 
+```{r by division}
+all_individuals_with_their_division <- all %>% 
+  left_join(by_division_mps, by = c("uniqueID"))
+
+head(all_individuals_with_their_division)
+```
+
+```{r by party}
+all_individuals_with_their_party <- all %>% 
+  left_join(by_party, by = c("uniqueID"))
+
+head(all_individuals_with_their_party)
+```
+
+```{r}
+party_count = all_individuals_with_their_party %>% group_by(uniqueID) %>% summarise(count=n()) 
+table(party_count$count)
+```
+
+```{r}
+# unique ID is usually surname + year of birth 
+party_count = all_individuals_with_their_party %>% group_by(uniqueID) %>% summarise(count=n()) 
+party_count2 = party_count %>% filter(count>=2)
+party_count2$yob = as.numeric(str_extract(party_count2$uniqueID, "\\d{1,4}"))
+party_count2$decade = as.numeric(paste0(str_extract(party_count2$uniqueID, "\\d{1,3}"),"0"))
+table(party_count2$decade)
+```
+
+```{r by aph id}
+all_individuals_with_their_aphid <- all %>% 
+  left_join(uniqueID_to_aphID, by = c("uniqueID"))
+
+head(all_individuals_with_their_aphid)
+```
+
+```{r}
+readr::write_csv(all_individuals_with_their_aphid, "aphid_parliamentarians.csv")
 ```
