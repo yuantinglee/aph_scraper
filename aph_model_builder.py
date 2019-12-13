@@ -39,7 +39,7 @@ def add_parlperiod(df):
         pp.years = years
         pp.save()
 
-def add_speaker(df):
+def add_speaker(df, role):
     """Parses House Speakers from list to database"""
     # modify to add deputy speakers as well by including variable role?
 
@@ -67,8 +67,8 @@ def add_speaker(df):
                 continue
 
         #### Dates
-        start_date = datetime.strptime(entry['Start_Date'].strip(), '%d.%m.%Y')
-        end_date = datetime.strptime(entry['End_Date'].strip(), '%d.%m.%Y')
+        start_date = datetime.strptime(str(entry['Start_Date']).strip(), '%d.%m.%Y')
+        end_date = datetime.strptime(str(entry['End_Date']).strip(), '%d.%m.%Y')
 
         n_years = end_date.year - start_date.year
         years = []
@@ -87,7 +87,7 @@ def add_speaker(df):
 
         post, created = pm.Post.objects.get_or_create(
         person = person,
-        title = 'Speaker',
+        title = role,
         parlperiod = pp,
         years = years,
         start_date = start_date,
@@ -95,5 +95,5 @@ def add_speaker(df):
         )
 
         post.save()
-        
+
     print("Done")
