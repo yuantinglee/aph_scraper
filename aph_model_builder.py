@@ -51,7 +51,7 @@ def add_speaker(df):
 
         pquery = pm.Person.objects.filter(
         surname = surname,
-        first_name = first_name,
+        alt_first_names__contains = [first_name],
         information_source = "AustralianPoliticians"
         )
 
@@ -62,11 +62,9 @@ def add_speaker(df):
             rquery = pquery.filter(alt_first_names__contains=[middle_name])
             if len(rquery) == 1:
                 person = rquery[0]
-
-        #### Names
-        #middle_names = []
-        #for name in entry.Middle_Names:
-        #    person.alt_first_names = middle_names.append(name)
+            else:
+                print("Politician not found for name: {} {}".format(first_name, surname))
+                continue
 
         #### Dates
         start_date = datetime.strptime(entry['Start_Date'].strip(), '%d.%m.%Y')
@@ -97,3 +95,5 @@ def add_speaker(df):
         )
 
         post.save()
+        
+    print("Done")
