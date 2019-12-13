@@ -3,3 +3,4 @@ xml_files/
 .ipynb_checkpoints
 *.log
 __pycache__/*
+testing/*
