@@ -5,6 +5,7 @@ from normality import normalize
 # import from appended path
 import parliament.models as pm
 import cities.models as cmodels
+from django.db.models import Q
 
 def find_person_in_db_aph(name, add_info={}, create=True, verbosity=1):
 
@@ -45,6 +46,8 @@ def find_person_in_db_aph(name, add_info={}, create=True, verbosity=1):
     else:
         name_id = None
 
+    if verbosity > 1:
+        print("Finding speaker with name id: {}".format(name_id))
     #! search using person.position ?
     #! could be important if speaker holds ministerial position
     # position = PERSON_POSITION.search(name)
@@ -58,13 +61,21 @@ def find_person_in_db_aph(name, add_info={}, create=True, verbosity=1):
 
     # find matching entry in database
     # provision for Speaker of Parliament
-    if name_id != '10000' or name_id != '110000':
+    if name_id != '10000' and name_id != '110000':
+        if verbosity > 1:
+            print("Finding speaker from MP database...")
         query = pm.Person.objects.filter(aph_id=name_id)
 
         if len(query) == 1:
             return query.first()
 
+        else:
+            print("Duplicate name ID entries detected")
+            return query.first()
+
     elif name_id == '10000' or name_id == '110000':
+        if verbosity > 1:
+            print("Finding speaker from Speaker database...")
         # check for name to see if speaker or deputy
         if surname == "SPEAKER":
             postquery = pm.Post.objects.get(
@@ -91,37 +102,22 @@ def find_person_in_db_aph(name, add_info={}, create=True, verbosity=1):
 
             elif len(rquery) > 1:
                 squery = rquery.filter(person__surname = surname)
-                parl_speaker = squery.first().person
-                return parl_speaker
 
+                if len(squery) == 1:
+                    parl_speaker = squery.first().person
+                    return parl_speaker
 
-    # should not have a need for multiple query results any more?
-    #elif len(query) > 1:
-        #if party:
-        #    rquery = query.filter(party__alt_names__contains=[party])
-        #    if len(rquery) == 1:
-        #        return emit_person(rquery.first(), period=pp, party=party)
-        #    elif len(rquery) > 1:
-        #        query = rquery
+                elif len(squery) == 0:
+                    print("Person not found in database as speaker: {}".format(name))
+                    print("Trying to find person by name")
 
-        #if pp:
-        #    rquery = query.filter(in_parlperiod__contains=[pp])
-        #    if len(rquery) == 1:
-                #return emit_person(rquery.first(), period=pp, party=party)
-        #        return emit_person(rquery.first(), period=pp)
-        #    elif len(rquery) > 1:
-        #        query = rquery
+                    tquery = pm.Person.objects.filter(surname=surname, first_name=firstname)
+                    if len(tquery) == 1:
+                        return tquery.first()
 
-        #print("! Warning: Could not distinguish between persons!")
-        #print("For name string: {}".format(name))
-        #print("first name: {}, surname: {}".format(firstname, surname))
-        #print("Query: {}".format(query))
+            else:
+                print("Person not found in database: {}".format(name))
 
-        #if first_entry_for_unresolved_ambiguity:
-        #    print('Taking first entry of ambiguous results')
-        #    return query.first()
-        #else:
-        #    return None
 
     # if query returns no results
     else:
@@ -134,17 +130,6 @@ def find_person_in_db_aph(name, add_info={}, create=True, verbosity=1):
 
         if create:
             person = pm.Person(surname=surname, first_name=firstname)
-
-            #if party:
-            #    try:
-            #        party_obj = pm.Party.objects.get(name=party)
-            #        person.party = party_obj
-            #    except pm.Party.DoesNotExist:
-            #        print("! Warning: party could not be identified: {}".format(party))
-
-            #if position:
-            #    person.positions = [position]
-                # use position with data model "Post" ?
 
             if name_id != 10000 and not None:
                 person.aph_id = name_id
