@@ -160,12 +160,21 @@ class parse_xml_items(object):
 
         ### start parsing of speeches
         for div in self.divs:
-            # either <debateinfo> or <subdebate.1>
             if self.v > 1:
                 print("div type: {}".format(div.xpath("type/text()")))
 
             for uts in div.iter('talk.start'):
                 if uts.getparent().tag in accepted_tags:
+                    # get agenda item
+                    tops = uts.xpath('ancestor::debate/child::debateinfo/child::title/text()')[0]
+                    tops = str(tops)
+
+                    # create agenda item
+                    agenda_item, created = pm.AgendaItem.objects.get_or_create(
+                    title = tops,
+                    document = self.doc
+                    )
+
                     for name in uts.xpath('talker//name'):
                         if name.get('role') == 'metadata':
                             namemd = name.text.split(', ')
@@ -202,6 +211,7 @@ class parse_xml_items(object):
                     ut = pm.Utterance(
                         document=self.doc,
                         speaker=speaker,
+                        agenda_item = agenda_item,
                         #speaker_role=speaker_role
                     )
                     ut.save()
@@ -247,11 +257,53 @@ class parse_xml_items(object):
                                 if k.text:
                                     inj = self.add_interjection(k.text, speaker_inj, para)
 
+                                else:
+                                    emptytext = ""
+                                    inj = self.add_interjection(emptytext, speaker_inj, para)
+
                         elif j.tag == "continue":
                             for con in j.xpath('child::*/child::para'):
                                 if con.text:
                                     para = self.create_paragraph(con.text.strip(u'\u2014'), ut)
 
+                elif uts.getparent().tag == "interjection":
+                    for l in uts.xpath('parent::interjection/preceding-sibling::debateinfo/child::type'):
+                        if l.text == "Notices":
+                            # speaker
+                            for name in uts.xpath('talker//name'):
+                                if name.get('role') == 'metadata':
+                                    namemd = name.text.split(', ')
+                                    if len(namemd) == 1:
+                                        names = namemd[0]
+                                    else:
+                                        names = namemd[1] + ' ' + namemd[0]
+
+                            # match speaker to database:
+                            info_dict = {}
+                            for nameidxp in uts.xpath('talker/name.id/text()'): info_dict['nameid'] = nameidxp
+                            for partyxp in uts.xpath('talker/party/text()'): info_dict['party'] = partyxp
+                            for electoratexp in uts.xpath('talker/electorate/text()'): info_dict['electorate'] = electoratexp
+                            for rolexp in uts.xpath('talker/role/text()'): info_dict['role'] = rolexp
+                            info_dict['pp'] = self.pp
+                            info_dict['session'] = self.session
+                            info_dict['date'] = self.date
+
+                            speaker = find_person_in_db_aph(names, add_info=info_dict, verbosity=self.v)
+
+                            if speaker is None:
+                                print(namemd[1],namemd[0])
+
+                            ut = pm.Utterance(
+                                document=self.doc,
+                                speaker=speaker,
+                                #speaker_role=speaker_role
+                            )
+                            ut.save()
+
+                            # text
+                            for m in uts.xpath('child::para|following-sibling::motion/child::para'):
+                                if m.text:
+                                    para = self.create_paragraph(m.text.strip(u'\u2014'), ut)
 # =================================================================================================================
 # main execution script
 if __name__ == '__main__':
