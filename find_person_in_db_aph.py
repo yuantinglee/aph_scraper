@@ -33,7 +33,6 @@ def find_person_in_db_aph(name, add_info={}, create=True, verbosity=1):
     name = name.replace('Mr ', '')
     name = name.replace('The ', '')
 
-
     if len(name.split(' ')) > 1:
         surname = name.split(' ')[-1]
         firstname = name.split(' ')[0]
@@ -61,7 +60,7 @@ def find_person_in_db_aph(name, add_info={}, create=True, verbosity=1):
 
     # find matching entry in database
     # provision for Speaker of Parliament
-    if name_id != '10000' and name_id != '110000':
+    if name_id != '10000' and name_id != '110000' and name_id != '1000':
         if verbosity > 1:
             print("Finding speaker from MP database...")
         query = pm.Person.objects.filter(aph_id=name_id)
@@ -73,7 +72,7 @@ def find_person_in_db_aph(name, add_info={}, create=True, verbosity=1):
             print("Duplicate name ID entries detected")
             return query.first()
 
-    elif name_id == '10000' or name_id == '110000':
+    elif name_id == '10000' or name_id == '110000' or name_id == "1000":
         if verbosity > 1:
             print("Finding speaker from Speaker database...")
         # check for name to see if speaker or deputy
@@ -111,8 +110,9 @@ def find_person_in_db_aph(name, add_info={}, create=True, verbosity=1):
                     print("Person not found in database as speaker: {}".format(name))
                     print("Trying to find person by name")
 
-                    tquery = pm.Person.objects.filter(surname=surname, first_name=firstname)
+                    tquery = pm.Person.objects.filter(surname=surname, alt_first_names__contains=[firstname])
                     if len(tquery) == 1:
+                        print("Found speaker by name: {}".format(name))
                         return tquery.first()
 
             else:
