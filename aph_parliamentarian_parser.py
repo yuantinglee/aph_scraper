@@ -246,7 +246,7 @@ if __name__ == '__main__':
     # updating the parties
     # update_parties()
     # parsing the data
-    parse_mdb_data(verbosity=0)
+    parse_aph_data(verbosity=0)
     # add parties
     add_party_colors = False
 
