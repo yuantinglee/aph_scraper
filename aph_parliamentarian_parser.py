@@ -14,8 +14,6 @@ import dataset
 from datetime import datetime
 from lxml import html
 from urllib.parse import urljoin
-# Extract agenda numbers not part of normdatei
-from normality import normalize
 import platform
 import pandas as pd
 
@@ -138,36 +136,38 @@ def parse_aph_data(verbosity=0):
     for i in df_pol.index:
         pol = df_pol.loc[i]
 
-        person = Person(
+        person = pm.Person(
             surname=str(pol['surname']),
             first_name=str(pol['firstName']),
-            unique_id=str(pol['uniqueID'])
+            unique_id=str(pol['uniqueID']),
+            aph_id=str(pol['aphID'])
             )
 
         # profile information
-        title = str(pol['title'])
-        if title is not None:
-            person.title = title
+        title = pol['title']
+        if pd.isnull(title) == False:
+            person.title = str(title)
 
-        if pol['birthDate'] != float('nan'):
-            dob = datetime.strptime(str(pol['birthDate']), '%Y-%m-%d')
-        yob = int(pol['birthYear'])
+        dob = pol['birthDate']
+        dod = pol['deathDate']
 
-        if dob is not None:
-            person.date_of_birth = dob
+        if pd.isnull(pol['birthYear']) == False:
+            yob = int(pol['birthYear'])
+
+        if pd.isnull(dob) == False:
+            person.date_of_birth = datetime.strptime(str(dob), '%Y-%m-%d')
         else:
             person.year_of_birth = yob
 
-        dod = datetime.strptime(str(pol['deathDate']), '%Y-%m-%d')
-        person.date_of_death = dod
+        if pd.isnull(dod) == False:
+            person.date_of_death = datetime.strptime(str(dod), '%Y-%m-%d')
 
         if pol['gender'] == "male":
-            person.gender = Person.MALE
+            person.gender = pm.Person.MALE
         elif pol['gender'] == "female":
-            person.gender = Person.FEMALE
+            person.gender = pm.Person.FEMALE
 
         # additional names
-        # surnames_list = []
         firstnames_list = []
 
         firstname = pol['allOtherNames']
@@ -197,22 +197,7 @@ def parse_aph_data(verbosity=0):
             # print name
             print("Person: {}".format(person))
 
-        # political party
-        # match politician ID in df_pol to df_party to find party
-        #try:
-        #    person.party = Party.objects.get(alt_names__contains=)
-        #except Party.DoesNotExist:
-        #    if biodata.find('PARTEI_KURZ').text == 'Plos':
-        #        person.party = Party.objects.get(name="parteilos")
-        #        pass
-        #    else:
-        #        print("Warning: Party not found: {}".format(biodata.find("PARTEI_KURZ").text))
-        #        warn += 1
-
-        # name id
-
-
-        person.active_country = Country.objects.get(name='Australia')
+        person.active_country = cmodels.Country.objects.get(name='Australia')
         # adding positions
         if pol['member'] == 1:
             person.positions = ['Member']
@@ -222,8 +207,8 @@ def parse_aph_data(verbosity=0):
         person.information_source = "AustralianPoliticians"
         person.save()
 
-        person.in_parlperiod = wp_list
-        person.save()
+        #person.in_parlperiod = wp_list
+        #person.save()
 
     print("Done. {} warnings.".format(warn))
 
