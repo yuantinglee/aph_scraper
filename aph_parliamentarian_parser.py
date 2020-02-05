@@ -11,7 +11,7 @@ import re
 import logging
 import requests
 import dataset
-import datetime
+from datetime import datetime
 from lxml import html
 from urllib.parse import urljoin
 # Extract agenda numbers not part of normdatei
