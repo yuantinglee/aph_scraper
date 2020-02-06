@@ -1,18 +1,16 @@
+import os
+import sys
 import re
-from regular_expressions_aph import *
 import pandas as pd
 from datetime import datetime
 
-# import from appended path
+import django
 import parliament.models as pm
 import cities.models as cmodels
 
-parl, created = pm.Parl.objects.get_or_create(
-    country=cmodels.Country.objects.get(name="Australia"),
-    level='N'
-)
+# --------------------------------------------
 
-def add_parlperiod(df):
+def add_parlperiod(df, parl):
     """Parses parliamentary periods from list to database"""
     for index, row in df.iterrows():
         n = index+1
@@ -38,6 +36,7 @@ def add_parlperiod(df):
 
         pp.years = years
         pp.save()
+
 
 def add_speaker(df, role):
     """Parses House Speakers from list to database"""
@@ -98,12 +97,12 @@ def add_speaker(df, role):
 
     print("Done")
 
-def parse_aph_data(verbosity=0):
+def parse_aph_data(file, verbosity=0):
     """Adds parliamentarians from AustralianPoliticians dataset to database"""
     warn = 0
 
-    df_pol = pd.read_csv(POL_FNAME)
-    print("read data from {}".format(POL_FNAME))
+    df_pol = pd.read_csv(file)
+    print("read data from {}".format(file))
 
     # going through entries for mdbs
     for i in df_pol.index:
@@ -177,16 +176,17 @@ def parse_aph_data(verbosity=0):
         if pol['senator'] == 1:
             person.positions = ['Senator']
 
-        person.information_source = "AustralianPoliticians"
+        person.information_source = "AustralianPoliticians2"
         person.save()
 
     print("Done. {} warnings.".format(warn))
 
+
 def add_parties(file, verbosity=1):
     """Add parties of parliamentarians to database"""
 
-    df_par = pd.read_csv(PAR_FNAME)
-    print("read data from {}".format(PAR_FNAME))
+    df_par = pd.read_csv(file)
+    print("read data from {}".format(file))
 
     parliament = pm.Parl.objects.get(country = cmodels.Country.objects.get(name='Australia'))
 
