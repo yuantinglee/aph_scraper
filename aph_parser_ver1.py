@@ -1,8 +1,8 @@
+#!/usr/bin/env python
+# australian parliamentary protocol parser for xml_schema 2.0 and 2.1
+
 import os
-import difflib
-import zipfile
 import lxml.etree as etree
-import random
 import re
 import sys
 import datetime as dt
@@ -11,34 +11,25 @@ from datetime import datetime
 import django
 import platform
 
-#if platform.node() == "mcc-apsis":
-    #sys.path.append('/home/muef/tmv/BasicBrowser/')
-    #tei_path = "/home/muef/GermaParlTEI-master"
+if platform.node() == "srv-mcc-apsis":
+    sys.path.append('/home/leey/tmv/BasicBrowser/')
+    xml_path = "/home/leey/australian_parliament_downloads/downloads_coal"
 
-#else:
+else:
     # local paths
-    #sys.path.append('/media/Data/MCC/tmv/BasicBrowser/')
-    #tei_path = "/media/Data/MCC/Parliament Germany/GermaParlTEI-master"
-
-sys.path.append('/home/leey/Documents/Data/tmv/BasicBrowser/')
-xml_path = "/home/leey/Documents/Data/australian_parliament_downloads/downloads_coal"
-
-#sys.path.append('/home/galm/software/django/tmv/BasicBrowser/')
+    sys.path.append('/home/leey/Documents/Data/tmv/BasicBrowser/')
+    xml_path = "/home/leey/Documents/Data/australian_parliament_downloads/downloads_coal"
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "BasicBrowser.settings")
 django.setup()
 
 # import from appended path
 import parliament.models as pm
-from parliament.tasks import do_search, run_tm
 import cities.models as cmodels
 from django.contrib.auth.models import User
 import tmv_app.models as tm
 
-#from parsing_utils import dehyphenate_with_space, clean_text
 from find_person_in_db_aph import *
-#from regular_expressions_global import POI_MARK
-
 # ============================================================
 # write output to file and terminal
 
@@ -70,7 +61,7 @@ class parse_xml_items(object):
 
     def __init__(self, xtree, v=1, period=None, session=None):
         self.v = v
-        self.divs = xtree.findall("//debate")
+        self.divs = xtree.findall("//chamber.xscript//debate")
         self.pp = int(xtree.xpath("//parliament.no//text()")[0])
         self.session = int(re.findall(r'\b\d+\b', xtree.xpath("//session.no//text()")[0])[0])
 
@@ -83,10 +74,7 @@ class parse_xml_items(object):
                 print("! Warning: session number not matching: {} {}".format(session, self.session))
 
         self.date = datetime.strptime(xtree.xpath("//date//text()")[0], '%Y-%m-%d')
-        #try:
-        #    self.original_source = xtree.xpath("//sourceDesc//url//text()")[0]
-        #except IndexError:
-        #    self.original_source = "NA"
+
         if self.v > 0:
             print("xml with protocol {}/{} from {}".format(self.pp, self.session, self.date))
 
@@ -198,21 +186,10 @@ class parse_xml_items(object):
                     if speaker is None:
                         print(namemd[1],namemd[0])
 
-                    #! to fix
-                    #speaker_role_set = pm.SpeakerRole.objects.filter(alt_names__contains={info_dict['role']})
-                    #if len(speaker_role_set) < 1:
-                    #    speaker_role = pm.SpeakerRole(name=info_dict['role'], alt_names={info_dict['role']})
-                    #    speaker_role.save()
-                    #else:
-                    #    speaker_role = speaker_role_set.first()
-                    #    if len(speaker_role_set) > 1:
-                    #        print("Warning: several speaker roles matching")
-
                     ut = pm.Utterance(
                         document=self.doc,
                         speaker=speaker,
                         agenda_item = agenda_item,
-                        #speaker_role=speaker_role
                     )
                     ut.save()
 
@@ -266,6 +243,12 @@ class parse_xml_items(object):
                                 if con.text:
                                     para = self.create_paragraph(con.text.strip(u'\u2014'), ut)
 
+                        elif j.tag == "motion" or j.tag == "quote":
+                            for par in j.xpath('child::para'):
+                                if par.text:
+                                    para = self.create_paragraph(par.text.strip(u'\u2014'), ut)
+
+
                 elif uts.getparent().tag == "interjection":
                     for l in uts.xpath('parent::interjection/preceding-sibling::debateinfo/child::type'):
                         if l.text == "Notices":
@@ -296,12 +279,11 @@ class parse_xml_items(object):
                             ut = pm.Utterance(
                                 document=self.doc,
                                 speaker=speaker,
-                                #speaker_role=speaker_role
                             )
                             ut.save()
 
                             # text
-                            for m in uts.xpath('child::para|following-sibling::motion/child::para'):
+                            for m in uts.xpath('child::para|following-sibling::motion/child::para|following-sibling::quote/child::para'):
                                 if m.text:
                                     para = self.create_paragraph(m.text.strip(u'\u2014'), ut)
 # =================================================================================================================
@@ -349,7 +331,6 @@ if __name__ == '__main__':
         etree.strip_tags(xtree, 'inline')
         parser = parse_xml_items(xtree)
 
-        # pm.Document.objects.filter(parlperiod__n=parser.wp, sitting=parser.session).delete()
         parser.run()
         print("Done.")
 
