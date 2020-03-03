@@ -16,4 +16,4 @@ This adds the members of parliament from the [AustralianPoliticians](https://git
 
 This adds specific parliamentary roles such as Speakers and Deputy Speakers as `Post` objects, linking them to the relevant person involved.
 
-As there are some entries that are not added with the script, they have to be manually added. This can be done in the `APH_models_builder_and_politican_parser.ipynb` under "add entries manually". 
+As there are some entries that are not added with the script, they have to be manually added. This can be done in the `APH_models_builder_and_politican_parser.ipynb` under **add entries manually**. 
