@@ -30,6 +30,8 @@ def find_person_in_db_aph(name, add_info={}, create=True, verbosity=1):
     name = re.sub(r'\([^)]*\)', '', name)
     name = name.replace('  ', ' ')
     name = name.replace('Dr ', '')
+    name = name.replace('Mrs ', '')
+    name = name.replace('Ms ', '')
     name = name.replace('Mr ', '')
     name = name.replace('The ', '')
 
