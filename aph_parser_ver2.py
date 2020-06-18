@@ -13,12 +13,12 @@ import platform
 
 if platform.node() == "srv-mcc-apsis":
     sys.path.append('/home/leey/tmv/BasicBrowser/')
-    xml_path = "/home/leey/australian_parliament_downloads/downloads_coal"
+    xml_path = "/home/leey/australian_parliament_downloads/downloads_coal/"
 
 else:
     # local paths
     sys.path.append('/home/leey/Documents/Data/tmv/BasicBrowser/')
-    xml_path = "/home/leey/Documents/Data/australian_parliament_downloads/downloads_coal"
+    xml_path = "/home/leey/Documents/Data/australian_parliament_downloads/downloads_coal/"
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "BasicBrowser.settings")
 django.setup()
