@@ -288,7 +288,7 @@ if __name__ == '__main__':
 
     if single_doc:
         # single file
-        xml_file = os.path.join(xml_path, "163-5858.xml")
+        xml_file = os.path.join(xml_path, "House_of_Representatives_2011_05_10_10_Official.xml")
 
         print("reading from {}".format(xml_file))
 
