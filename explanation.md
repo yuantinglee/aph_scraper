@@ -28,8 +28,10 @@ There are two different versions of the APH scraper - 1 and 2.
 Version 1 is meant for xml versions 2.0 and 2.1, and Version 2 is meant for xml version 2.2
 
 Example (Version 1): [https://apsis.mcc-berlin.net/parliament/document/19866/](https://apsis.mcc-berlin.net/parliament/document/19866/)
+- raw file: 163-5858.xml
 
 Example (Version 2): [https://apsis.mcc-berlin.net/parliament/document/19868/](https://apsis.mcc-berlin.net/parliament/document/19868/)
+- raw file: House_of_Representatives_2011_05_10_10_Official.xml
 
 ### To Do:
 
