@@ -11,6 +11,7 @@ library(tidyverse)
 ```{r message=FALSE}
 #devtools::install_github("RohanAlexander/AustralianPoliticians")
 #load("/home/leey/Documents/Data/AustralianPoliticians/data/all.rda")
+library(AustralianPoliticians)
 ```
 
 ```{r}
